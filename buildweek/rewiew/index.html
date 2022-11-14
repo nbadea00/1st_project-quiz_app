@@ -5,6 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rewiew|Epicode</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+        #title{
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.7em;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+
+        #subtitle{
+            font-size: 1.6em;
+            font-family: 'Outfit', sans-serif;
+            padding: 0 115px 35px 115px;
+            font-weight: 300;
+        }
+        
+        #feedback{
+            font-size: 1.6em;
+            font-family: 'Outfit', sans-serif;
+            padding-bottom: 35px;
+            font-weight: 300;
+        }
+
+        main{
+            text-align: center;
+        }
+
+        #star{
+            padding-right: 12.2px;
+        }
+
+        #rating{
+            padding-bottom: 90px;
+        }
+
+        #comment
+        {
+            margin: 0 0 60px 110px;
+            padding-right: 500px;
+            border-bottom: 3px solid #d20094;
+        }
+
+        #div-comment{
+            text-align: left;
+        }
+
+    </style>
 </head>
 <body>
     <div id="bg">
@@ -15,17 +68,29 @@
         </header>
 
         <main>
-            <h2 class="title">Tell us how it's going</h2>
-            <p>
-                From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague?
-            </p>
-             <!-- <img src="../assets/star.svg" alt="star"> da fare in js-->
-             <p>
-                Leave us an open feedback about your experience so far
-             </p>
+            <h2 id="title">Tell us how it's going</h2>
+            <div id="subtitle">
+                <p>
+                    From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague?
+                </p>
+            </div>
 
-             <input type="text" placeholder="Write your comment here" id="comment">
-             <button id="button">MORE INFO</button>
+            <div id="rating">
+                <!-- <img src="../assets/star.svg" alt="star"> da fare in js-->
+                <img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt="">
+            </div>
+
+            <div id="feedback">
+                <p>
+                    Leave us an open feedback about your experience so far
+                </p>
+            </div>
+            <div id="div-comment">
+             <input type="text" placeholder="       Write your comment here" id="comment">
+            </div>
+             <div>
+             <button class="button">MORE INFO</button>
+            </div>
         </main>
   
      </div>
