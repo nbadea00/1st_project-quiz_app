@@ -6,8 +6,80 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- font-family: 'Inter', sans-serif; -->
+    <!-- font-family: 'Outfit', sans-serif; -->
+    <style>
+    body{
+        color: rgba(255, 255, 255, 0.963);
+    }
+    #bg{
+        background-image: url("../assets/bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+    }
+    #logo{
+        padding: 40px 0px 40px 10%;
+    }
+    #logo img{
+        width: 150px;
+    }
+    
+    #question h1{  
+        opacity: 0.9;
+        padding: 10% 25% 10% 25%;
+        text-align: center;
+        font-family: 'Outfit', sans-serif;
+        font-size: 60px;
+    }
+    #question h1 span{
+        font-weight: 600;
+    }
+    p{
+        font-family:'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    #bow-answers{
+        display:flex;
+        justify-content: center;
+        
+    }
+    #box-answers div{
+        border: 3px solid transparent;
+        padding: 30px 50px 0 50px;
+        border-radius: 50px;
+        width: 250px;
+        height: 50px;
+        text-align: center;
+        background-color: #23294f;
+        opacity: 0.9; 
+        margin: 0px;
+        
+    }
+    
+    #recap{
+        padding:50px;
+        text-align: center;}
+    #recap span{
+        color: #900080;
+    }
+
+    
+    </style>
 </head>
 <body>
 
@@ -15,7 +87,7 @@
         <header>
 
             <div id="logo">
-                <img  src="../Buildweek/Assets/epicode_logo.png" alt="">
+                <img src="../assets/epicode_logo.png" alt="">
             </div>
 
             <div id="countdown"></div>
@@ -27,14 +99,14 @@
             <div>
 
                 <div id="question">
-                    <h1>How can I create a <b>checkbox in HTML</b></h1>
+                    <h1>How can I create a <span>checkbox in HTML?</span></h1>
                 </div>
 
                 <div id="box-answers">
-                    <div><p>answer number 1</p></div>
-                    <div><p>answer number 2</p></div>
+                    <div><p>&lt;input type = "check"&gt;</p></div>
                     <div><p>answer number 3</p></div>
                     <div><p>answer number 4</p></div>
+                    <div><p>answer number 1</p></div>
                 </div>
             </div>
 
@@ -43,6 +115,7 @@
         <footer>
 
             <div id="recap">
+                <p>QUESTION 1 <span>/10</span></p>
             </div>
 
         </footer>
