@@ -55,17 +55,23 @@
     background-color: rgb(201, 4, 215);
     border: 1px solid rgb(201, 4, 215);
     border-radius: 250px;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin-top: -80px;
+}
+
+#buttonRates{
+    margin-top: -70px;
+    text-align: center;
 }
 
 #buttonRate{
     background-color: transparent;
     color: white;
-    font-size: large;
-    font-weight: bolder;
+    font-size: 1em;
+    font-weight: 700;
     text-transform: uppercase;
-    border: 3px solid white;
-    margin-top: -100px;
-    }
+    border: none;
+    padding: 0.8em 2.4em 0.8em 2.4em;
+    border: 2px solid white;
+}
