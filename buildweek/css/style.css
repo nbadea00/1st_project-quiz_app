@@ -1,0 +1,302 @@
+/*
+    Fonts import
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Outfit:wght@400;700&display=swap%27');
+
+/*
+    Impostazioni generali
+*/
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    height: 100vh;
+}
+
+#bg {
+    background-image: url(../assets/bg.jpg);/*percorso del immagine*/
+    background-position: center;/*metto l'immagine centrata*/
+    background-repeat: no-repeat;/*l'immagine non si deve ripetere*/
+    background-size: cover;/*serve per far riempire all'immagine tutto il div*/
+    box-sizing: border-box;/*elimina il padding in eccesso*/
+    width: 100%;
+    height: 100%;
+    padding: 35px 70px;
+}
+
+.subtitles {
+    font-size: 30px;
+    font-family: 'Outfit', sans-serif;
+}
+
+#logo img {
+    width: 180px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-title {
+    line-height: 4rem;
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+}
+
+/*----------------------------------------------------------------*/
+
+/*
+    Welcome page
+*/
+
+/*
+    Main Welcome
+*/
+main {
+    padding-top: 80px;
+}
+
+/*Titolo pagina*/
+.titolo-welcome {
+    max-width: 450px;
+    padding-bottom: 50px;
+    line-height: 2.8rem;
+}
+
+/*sottotitolo*/
+.purple {
+    color: #c2128d;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+/*Paragrafo*/
+.description {
+    max-width: 520px;
+    padding-bottom: 50px;
+    line-height: 1.5rem;
+}
+
+/*
+    lista 
+*/
+.list {
+    padding-left: 25px;
+}
+.list-elements {
+    padding: 5px 0;
+}
+
+/*
+    Checkbox e pulsante in fondo alla pagina
+*/
+#container-input {
+    display: flex;
+    justify-content: space-between;/*Posiziona gli elementi mettendo il massimo spazio tra loro*/
+    align-items: center;
+    margin-top: 110px;
+    max-width: 800px;/*si mette una larghezza massima altrimenti il pulsante si andrebbe a posizionare all'estremità opposta*/
+}
+
+#container-checkbox {
+    display: flex;
+}
+
+#checkbox {/*Usiamo un div per creare la checkbox*/
+    background: none;
+    height: 10px;
+    width: 10px;
+    border: solid 3px white;
+    margin-right: 10px;
+}
+
+.button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Outfit' , sans-serif;
+    color: #0b113b;
+    background-color: #00FFFF;
+    box-shadow: 0 0 30px 2px #00FFFF;/*Alone del pulsante*/
+    border: none;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+    text-decoration: none;
+}
+/*
+    Fine Welcome page
+*/
+
+/*----------------------------------------------------------------*/
+
+/*
+    Question page
+*/
+
+header{
+    display: flex;
+    justify-content: space-between;/*separa il logo dal timer*/
+}
+
+#countdown{/*Questo div serve per capire dove starà il timer*/
+    height: 130px;
+    width: 130px;
+    border-radius:100%;
+    background-color: #00FFFF;
+}
+
+/*
+    Main question
+*/
+
+#main-questions{
+    padding-top: 30px;
+}
+
+.container{/*serve per allineare la domanda e le risposte*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*testo della domanda*/
+#question{
+    text-align: center;
+    max-width: 50%;
+}
+
+/*div per unire i div delle risposte*/
+#container-answers{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;/*fa andare a capo se non c'è più spazio*/
+    max-width: 60%;/*limito la larghezza per far andare a capo le risposte*/
+    margin-top: 80px;
+    gap: 15px;/*aggiunge dello spazio tra i div delle risposte*/
+}
+
+.box-answers{
+
+    /*centro i paragrafi*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 350px;
+    background: none;/*per rendere trasparente lo sfondo senza intaccare le scritte e i bordi*/
+
+    /*smusso i bordi*/
+    border: 3px solid white;
+    border-radius: 50px;
+    border-bottom: none;
+    border-right: none;
+    box-shadow: 0px 0px 1px white;
+
+    box-sizing: border-box;/*elimina il padding in eccesso*/
+}
+
+/*
+    Footer question
+*/
+
+#recap{
+    text-align: center;
+    margin-top: 130px;
+}
+#recap span{
+    color: #900080;
+}
+
+/*----------------------------------------------------------------*/
+
+/*
+    Result page
+*/
+
+
+/*
+    Contenitore del titolo
+*/
+
+#upside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+/*Titolo pagina*/
+#upside h1{
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+/*sottotiiolo*/
+#upside h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+/*parte centrale*/
+#side{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    width: 70%;
+}
+
+/*lato corretto*/
+#correct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 136px;/*serve per fare in modo che correct e wrong siano larghi uguale*/
+}
+#correct h3{
+    font-size: 2.4em;
+    font-weight: 400;
+}
+
+/*lato errore*/
+#wrong{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 136px;/*serve per fare in modo che correct e wrong siano larghi uguale*/
+}
+#wrong h3{
+    font-size: 2.4em;
+    font-weight: 400;
+}
+
+/*percentuare*/
+.percentage{
+    font-size: 2.4em;
+}
+
+/*cerchio di prova*/
+.circle{
+    background-color: rgb(201, 4, 215);
+    border-radius: 250px;
+    width: 250px;
+    height: 250px;
+}
+
+/*contenitore del bottone*/
+#buttonRates{
+    text-align: center;
+    margin-top: 50px;
+    width: 70%;
+}
+
+/*stile bottone*/
+#buttonRate{
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.8em 2.4em 0.8em 2.4em;
+    border: 2px solid white;
+}

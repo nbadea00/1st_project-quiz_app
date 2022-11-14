@@ -8,34 +8,60 @@
    <meta name="description" content="welcome">
    <link rel="stylesheet" href="../css/fontawesome.css" />
    <link rel="stylesheet" href="../css/reset.css" />
-   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="../css/style.css" />
    <title>Welcome|Epicode</title>
 </head>
 
 <body>
-   <div id="bg">
+   <div id="bg"><!--div che serve da sfondo-->
+
+      <!--header-->
+
       <header>
+
          <div id="logo">
+
             <img src="../assets/epicode_logo.png" alt="logo-epicode">
+
          </div>
+
       </header>
 
+      <!--main-->
+
       <main>
-         <h1>Welcome to <span class ="bold">your exam</span></h1>
+
+         <!--Titolo-->
+         <h1 class="font-title titolo-welcome">Welcome to <span class ="bold">your exam</span></h1>
+
+         <!--Sottotitolo-->
          <h2 class="subtitles purple">Instructions</h2>
-         <p> We don't expect most engineers to know the answer to all of these questions, so don't worry if you're
+
+         <!--Descrizione-->
+         <p class="description"> We don't expect most engineers to know the answer to all of these questions, so don't worry if you're
             unsure of a few of them.</p>
+
+         <!--Lista-->
          <ul class="list">
-            <li class ="list-elements">Each question is <span class ="bold">timed</span> and can only be <span class ="bold">answered one.</span></li>
-            <li class ="list-elements">Changing browser tab or opening other windows will invalidate <span class ="bold">the question.</span></li>
+            <li class ="list-elements">Each question is <span class ="bold">timed</span> and can only be <span class ="bold">answered once.</span></li>
+            <li class ="list-elements">Changing browser tab or opening other windows will <span class ="bold">invalidate the question.</span></li>
             <li class ="list-elements">This exam take approx. <span class ="bold">0-5 minutes.</span></li>
          </ul>
+
          <div id="container-input">
+
             <div id="container-checkbox">
+
+               <!--div per la checkbox-->
                <div id="checkbox"></div>
+
                <span>I promise to answer myself without help from anyone</span>
+
             </div>
-               <button class="button">PROCEED</button>
+
+            <!--linck che fa da pulsante-->
+               <a href="../Questions/index.html" title="link per procedere al test" class="button">PROCEED</a><!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
+
          </div>
       </main>
 
