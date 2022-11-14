@@ -6,9 +6,9 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="welcome">
-   <link rel="stylesheet" href="/buildweek/css/fontawesome.css" />
-   <link rel="stylesheet" href="/buildweek/css/reset.css" />
-   <link rel="stylesheet" href="/buildweek/css/style.css" />
+   <link rel="stylesheet" href="../css/fontawesome.css" />
+   <link rel="stylesheet" href="../css/reset.css" />
+   <link rel="stylesheet" href="style.css" />
    <title>Welcome|Epicode</title>
 </head>
 
@@ -21,19 +21,22 @@
       </header>
 
       <main>
-         <h1>Welcome to your exam</h1>
-         <h2 class="subtitles">Instructions</h2>
+         <h1>Welcome to <span class ="bold">your exam</span></h1>
+         <h2 class="subtitles purple">Instructions</h2>
          <p> We don't expect most engineers to know the answer to all of these questions, so don't worry if you're
             unsure of a few of them.</p>
-         <ul>
-            <li>Each question is timed and can only be answered one.</li>
-            <li>Changing browser tab or opening other windows will invalidate the question.</li>
-            <li>This exam take approx. 0-5 minutes.</li>
+         <ul class="list">
+            <li class ="list-elements">Each question is <span class ="bold">timed</span> and can only be <span class ="bold">answered one.</span></li>
+            <li class ="list-elements">Changing browser tab or opening other windows will invalidate <span class ="bold">the question.</span></li>
+            <li class ="list-elements">This exam take approx. <span class ="bold">0-5 minutes.</span></li>
          </ul>
-
-         <input id="checklist" type="checkbox">
-         <button class="button">PROCEED</button>
-
+         <div id="container-input">
+            <div id="container-checkbox">
+               <div id="checkbox"></div>
+               <span>I promise to answer myself without help from anyone</span>
+            </div>
+               <button class="button">PROCEED</button>
+         </div>
       </main>
 
    </div>
