@@ -84,22 +84,24 @@
 
             
             <!--linck che fa da pulsante-->
-               <a href="../Questions/index.html" title="link per procedere al test" class="button">PROCEED</a><!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
+               <a href="../Questions/index.html" title="link per procedere al test" class="button" name="submit">PROCEED</a><!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
+
+               <input type="submit" name="sendNewSms" class="inputButton" id="sendNewSms" value=" Send " />
+               <input type="checkbox" id="disableBtn" />
 
          </div>
       </main>
 
       <script>
-         document.getElementById('checkbox')
-         .addEventListener('click', function(){
-         if( checked == false){
-         document.getElementById("checkbox").checked = true;
-         }else{
          
-         document.getElementById("checkbox").checked = false;
-         }
 
-         })
+         var submit = document.getElementById('sendNewSms'),
+         checkbox = document.getElementById('disableBtn'),
+         disableSubmit = function(e) {
+         submit.disabled = this.checked
+         };
+
+      checkbox.addEventListener('change', disableSubmit);
      
          
       </script>
