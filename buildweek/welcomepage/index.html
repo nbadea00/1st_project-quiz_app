@@ -10,6 +10,27 @@
    <link rel="stylesheet" href="../css/reset.css" />
    <link rel="stylesheet" href="../css/style.css" />
    <title>Welcome|Epicode</title>
+
+   <style>
+
+      input {
+         margin: 0;
+         padding: 2px 0 0px 24px;
+         cursor: pointer;
+         background: url('start.png') left center no-repeat;
+      }
+      #check{
+         width: 15px;
+         background-color: white;
+      }
+
+      #container-check{
+         border: 2px solid white;
+         width: 13px;
+         height: 13px;
+
+      }
+   </style>
 </head>
 
 <body>
@@ -53,18 +74,35 @@
             <div id="container-checkbox">
 
                <!--div per la checkbox-->
-               <div class="checkbox"></div>
+               <div id="container-check">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="check"><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+               </div>
 
-               <span>I promise to answer myself without help from anyone</span>
-
+               <span class ="bold">I promise to answer myself without help from anyone</span>
+                  
             </div>
 
+            
             <!--linck che fa da pulsante-->
                <a href="../Questions/index.html" title="link per procedere al test" class="button">PROCEED</a><!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
 
          </div>
       </main>
 
+      <script>
+         document.getElementById('checkbox')
+         .addEventListener('click', function(){
+         if( checked == false){
+         document.getElementById("checkbox").checked = true;
+         }else{
+         
+         document.getElementById("checkbox").checked = false;
+         }
+
+         })
+     
+         
+      </script>
    </div>
 </body>
 

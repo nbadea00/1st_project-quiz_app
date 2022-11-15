@@ -102,10 +102,10 @@ main {
 
 #checkbox {/*Usiamo un div per creare la checkbox*/
     background: none;
-    height: 10px;
-    width: 10px;
-    border: solid 3px white;
-    margin-right: 10px;
+    height: 13px;
+    width: 13px;
+    border: solid px white;
+    margin-right: 12px;
 }
 
 .button {
