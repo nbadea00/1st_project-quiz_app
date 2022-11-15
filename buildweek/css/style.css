@@ -136,12 +136,45 @@ header{
     justify-content: space-between;/*separa il logo dal timer*/
 }
 
-#countdown{/*Questo div serve per capire dove starà il timer*/
-    height: 130px;
-    width: 130px;
-    border-radius:100%;
-    background-color: #00FFFF;
-}
+.chart {/*usiamo un div per definire il cerchio*/
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  
+  .percent {/*stile della parte azzurra del cerchio*/
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    overflow: hidden;
+    left: 50px;
+    transform-origin: left center;
+    border-width: 1px;
+  }
+  
+  .percent:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: -50px;
+    border-radius: 50px 0 0 50px;
+    transform-origin: right center;
+  }
+  
+  .filler {/*stile della parte bianca del cerchio*/
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    left: 8px;
+    top: 8px;
+    border-radius: 42px;
+    text-align: center;
+    line-height: 84px;
+    font-size: 25px;
+    font-family: sans-serif;
+  }
 
 /*
     Main question
