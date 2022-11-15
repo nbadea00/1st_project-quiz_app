@@ -76,7 +76,9 @@ svg circle {
           <circle r="18" cx="20" cy="20"></circle>
         </svg>
       </div>
+
     <script>
+<<<<<<< HEAD
 
     var countdownNumberEl = document.getElementById('countdown-number');
 
@@ -85,12 +87,20 @@ svg circle {
 
     var colore2 = '#ffffff';
 
+=======
+    var countdownNumberEl = document.getElementById('countdown-number');
+    var countdown = 60;
+>>>>>>> refs/remotes/origin/master
 
     countdownNumberEl.textContent = countdown;
 
     setInterval(function() {
     countdown = --countdown <= 0 ? 60 : countdown;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> refs/remotes/origin/master
     countdownNumberEl.textContent = countdown;
     }, 165);    
 

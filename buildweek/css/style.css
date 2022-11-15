@@ -255,6 +255,9 @@ header{
 /*
     Contenitore del titolo
 */
+.result-main{
+    padding-top: 20px;
+}
 
 #upside{
     display: flex;
@@ -313,14 +316,49 @@ header{
     font-size: 2.4em;
 }
 
-/*cerchio di prova*/
-.circle{
-    background-color: rgb(201, 4, 215);
-    border-radius: 250px;
-    width: 250px;
-    height: 250px;
+/*cerchio risultato*/
+.single-chart {
+    width: 280px;
+    justify-content: space-around;
 }
 
+.circular-chart {
+    display: block;
+    margin: 0px auto;
+    max-width: 80%;
+    max-height: 250px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #00FFFF;
+    stroke-width: 4;
+    border: none;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 4;
+    stroke-dasharray: 85, 100;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.blue .circle {
+    stroke: #D20094;
+}
+
+.risult-text {
+    fill: #D20094;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
 /*contenitore del bottone*/
 #buttonRates{
     text-align: center;
@@ -339,3 +377,4 @@ header{
     padding: 0.8em 2.4em 0.8em 2.4em;
     border: 2px solid white;
 }
+
