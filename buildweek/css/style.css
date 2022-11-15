@@ -141,6 +141,7 @@ header{
     width: 100px;
     height: 100px;
     border-radius: 50px;
+  
   }
   
   .percent {/*stile della parte azzurra del cerchio*/
@@ -174,7 +175,12 @@ header{
     line-height: 84px;
     font-size: 25px;
     font-family: sans-serif;
+
   }
+   .filler img {
+    width: 10px;
+   }
+
 
 /*
     Main question

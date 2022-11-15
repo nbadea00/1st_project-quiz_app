@@ -89,8 +89,10 @@
         var timer;
         var max = 60; //secondi del timer
         var percentage = max;
-        var dialColor = "#DFE8ED";
+        var dialColor = "#ffffff";
         var percColor = "#306AA7";
+       
+       
 
         function setPercentage(percentage) {
             var element = document.createElement('style');
@@ -103,7 +105,7 @@
                 document.getElementsByClassName("percent")[0].style.transform = "rotate(" + (-180 + (percentage - 0.5) * 360) + "deg(";
             } else {
                 document.getElementsByClassName("chart")[0].style.backgroundColor = dialColor;
-                element.innerHTML += 'background-color: ' + percColor + ';';
+                element.innerHTML += 'background-color: ' + percColor +';';
                 element.innerHTML += 'transform:rotate(' + (180 - (percentage - 0.5) * 360) + 'deg);';
                 document.getElementsByClassName("percent")[0].style.transform = "rotate(180deg)";
             }
