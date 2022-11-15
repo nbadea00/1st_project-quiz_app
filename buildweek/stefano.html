@@ -39,6 +39,7 @@ svg  {
   
 }
 
+
 svg circle {
     
   stroke-dasharray: 113px;
@@ -50,6 +51,7 @@ svg circle {
   animation: countdown 10s linear infinite forwards;
   background-color: white;
 }
+
 
 
 
@@ -78,7 +80,6 @@ svg circle {
       </div>
 
     <script>
-<<<<<<< HEAD
 
     var countdownNumberEl = document.getElementById('countdown-number');
 
@@ -87,20 +88,12 @@ svg circle {
 
     var colore2 = '#ffffff';
 
-=======
-    var countdownNumberEl = document.getElementById('countdown-number');
-    var countdown = 60;
->>>>>>> refs/remotes/origin/master
 
     countdownNumberEl.textContent = countdown;
 
     setInterval(function() {
     countdown = --countdown <= 0 ? 60 : countdown;
-<<<<<<< HEAD
     
-=======
-
->>>>>>> refs/remotes/origin/master
     countdownNumberEl.textContent = countdown;
     }, 165);    
 
