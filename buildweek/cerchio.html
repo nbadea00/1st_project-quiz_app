@@ -167,7 +167,7 @@ function setRemainingPathColor(timeLeft) {
     document
       .getElementById("base-timer-path-remaining")
       .classList.add(step3.color);
-  } else if (timeLeft <= warning.threshold) {
+  } else if (timeLeft <= step2.threshold) {
     document
       .getElementById("base-timer-path-remaining")
       .classList.remove(step1.color);
