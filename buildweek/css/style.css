@@ -415,16 +415,44 @@ Footer question
 .pop-up-correct {
     position: absolute;
     top: 405px;
-    left:40%;
+    left:38%;
     visibility: hidden;
     z-index: 1;
+
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.blu{
+    width: 16px;
+    height: 16px;
+    background-color: #00FFFF;
+    margin-right: 2px;
+}
+
 .pop-up-wrong{
     position: absolute;
-    top: 300px;
-    left:55%;
     visibility: hidden;
     z-index: 1;
+    
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viola{
+    width: 16px;
+    height: 16px;
+    background-color:#D20094;
+    margin-right: 2px;
 }
 
 @keyframes progress {
