@@ -95,6 +95,20 @@ main {
 /*
     Checkbox e pulsante in fondo alla pagina
 */
+
+/*
+    stile messagio di errore
+*/
+.messages{
+    background-color: transparent;
+    display: none;
+    color: red;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 85px;
+    left: 90px
+}
+
 #container-input {
     display: flex;
     justify-content: space-between;/*Posiziona gli elementi mettendo il massimo spazio tra loro*/
@@ -107,7 +121,8 @@ main {
     display: flex;
 }
 
-#checkbox {/*Usiamo un div per creare la checkbox*/
+/*checkbox stile*/
+#container-check {/*Usiamo un div per creare la checkbox*/
     background: none;
     height: 13px;
     width: 13px;
@@ -115,6 +130,7 @@ main {
     margin-right: 12px;
 }
 
+/*stile pulsante*/
 .button {
     font-size: 1.2rem;
     font-weight: bold;
@@ -339,13 +355,8 @@ header{
 
 .circle-bg {
     fill: none;
-<<<<<<< HEAD
-    stroke: #00FFFF;
+    stroke: #D20094;
     stroke-width: 0.4em;
-=======
-    stroke:  #D20094;
-    stroke-width: 4;
->>>>>>> 6ebfc0483b44695e8ce8ed77c0230802549663ce
     border: none;
 }
 

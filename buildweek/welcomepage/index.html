@@ -73,6 +73,8 @@
             <li class="list-elements">This exam take approx. <span class="bold">0-5 minutes.</span></li>
          </ul>
 
+         <div class="messages"></div>
+
          <div id="container-input">
 
             <div id="container-checkbox">
@@ -86,36 +88,39 @@
 
 
             <!--linck che fa da pulsante-->
-               <button class="button">PROCEED</button>
-               <!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
+            <button class="button">PROCEED</button>
+            <!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
 
          </div>
       </main>
 
       <script>
 
+         /*permette di spuntare la checkbox*/
          document.querySelector('#container-check').addEventListener('click', function () {
-            if (this.innerHTML == '') {
+            if (this.innerHTML == '') {/*se la checkbox è vuota allor ainserisco l'immagine del tick*/
                this.innerHTML = '<i class="fas fa-check"></i>';
-            } else {
+            } else {/*permetto all'utente di togliere la spunta*/
                this.innerHTML = '';
             }
-            })
-            document.querySelector('.button').addEventListener('click', function () {
-               let containerCheck = document.querySelector('#container-check');
-               let div = document.querySelector('#container-input');
-               
-               console.log(containerCheck.innerHTML)
+         })
 
-               if (containerCheck.innerHTML) {
-                  window.location.href = "../Questions/index.html";
-               } else {
-                  let divButton = document.querySelector('#container-checkbox');
-                  let span = document.createElement('p');
-                  span.textContent = 'Please fill the field';
-                  span.classList.add('alert')
-                  divButton.prepend(span)
+         document.querySelector('.button').addEventListener('click', function () {/*aggiungo la funzine al*/
+            let containerCheck = document.querySelector('#container-check');/*seleziono la checkbox*/
+
+            if (containerCheck.innerHTML) {/*controla se la checkbox è stata validata*/
+               window.location.href = "../Questions/index.html";/*se valido ti manda alla paggina succesiva*/
+            } else {
+               let divMessages = document.querySelector('.messages');/*seleziono il div per inserire il messaggio*/
+
+               if (divMessages.style.display != 'block') {/*se è stato inserito il messaggio allora il display è block quindi anche se riclicato il bottone non crea un nuovo messaggio ma rimane quello precedente*/
+                  let span = document.createElement('span');/*creo uno span*/
+                  span.textContent = 'Please fill the field';/*scrivo il messaggio*/
+                  span.classList.add('alert')/*aggiungo la classe per lo stile*/
+                  divMessages.style.display = 'block';/*rendo visibile il div*/
+                  divMessages.append(span)/*inserisco lo span al interno del div*/
                }
+            }
          });
 
 
