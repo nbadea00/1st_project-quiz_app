@@ -42,6 +42,13 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
+.alert{
+    font-size: 1.2rem;
+    color: red;
+    text-decoration: solid;
+    margin-right: 5px;
+}
+
 /*----------------------------------------------------------------*/
 
 /*
@@ -318,7 +325,7 @@ header{
 
 /*cerchio risultato*/
 .single-chart {
-    width: 280px;
+    width: 300px;
     justify-content: space-around;
 }
 
@@ -332,13 +339,13 @@ header{
 .circle-bg {
     fill: none;
     stroke: #00FFFF;
-    stroke-width: 4;
+    stroke-width: 0.4em;
     border: none;
 }
 
 .circle {
     fill: none;
-    stroke-width: 4;
+    stroke-width: 0.4em;
     stroke-dasharray: 85, 100;
     animation: progress 1s ease-out forwards;
 }
@@ -359,6 +366,7 @@ header{
     font-size: 0.5em;
     text-anchor: middle;
 }
+
 /*contenitore del bottone*/
 #buttonRates{
     text-align: center;

@@ -12,19 +12,19 @@
    <title>Welcome|Epicode</title>
 
    <style>
-
       input {
          margin: 0;
          padding: 2px 0 0px 24px;
          cursor: pointer;
          background: url('start.png') left center no-repeat;
       }
-      #check{
+
+      #check {
          width: 15px;
          background-color: white;
       }
 
-      #container-check{
+      #container-check {
          border: 2px solid white;
          width: 13px;
          height: 13px;
@@ -34,7 +34,8 @@
 </head>
 
 <body>
-   <div id="bg"><!--div che serve da sfondo-->
+   <div id="bg">
+      <!--div che serve da sfondo-->
 
       <!--header-->
 
@@ -53,20 +54,23 @@
       <main>
 
          <!--Titolo-->
-         <h1 class="font-title titolo-welcome">Welcome to <span class ="bold">your exam</span></h1>
+         <h1 class="font-title titolo-welcome">Welcome to <span class="bold">your exam</span></h1>
 
          <!--Sottotitolo-->
          <h2 class="subtitles purple">Instructions</h2>
 
          <!--Descrizione-->
-         <p class="description"> We don't expect most engineers to know the answer to all of these questions, so don't worry if you're
+         <p class="description"> We don't expect most engineers to know the answer to all of these questions, so don't
+            worry if you're
             unsure of a few of them.</p>
 
          <!--Lista-->
          <ul class="list">
-            <li class ="list-elements">Each question is <span class ="bold">timed</span> and can only be <span class ="bold">answered once.</span></li>
-            <li class ="list-elements">Changing browser tab or opening other windows will <span class ="bold">invalidate the question.</span></li>
-            <li class ="list-elements">This exam take approx. <span class ="bold">0-5 minutes.</span></li>
+            <li class="list-elements">Each question is <span class="bold">timed</span> and can only be <span
+                  class="bold">answered once.</span></li>
+            <li class="list-elements">Changing browser tab or opening other windows will <span class="bold">invalidate
+                  the question.</span></li>
+            <li class="list-elements">This exam take approx. <span class="bold">0-5 minutes.</span></li>
          </ul>
 
          <div id="container-input">
@@ -76,42 +80,46 @@
                <!--div per la checkbox-->
                <div id="container-check"></div>
 
-               <span class ="bold">I promise to answer myself without help from anyone</span>
-                  
+               <span class="bold">I promise to answer myself without help from anyone</span>
+
             </div>
 
-            
+
             <!--linck che fa da pulsante-->
-               <button class="button">PROCEED</button><!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
+               <button class="button">PROCEED</button>
+               <!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
+
          </div>
       </main>
 
       <script>
-         
-         document.querySelector('#container-check').addEventListener('click', function(){
-            if(this.innerHTML == ''){
+
+         document.querySelector('#container-check').addEventListener('click', function () {
+            if (this.innerHTML == '') {
                this.innerHTML = '<i class="fas fa-check"></i>';
-            }else{
+            } else {
                this.innerHTML = '';
             }
-         })
+            })
+            document.querySelector('.button').addEventListener('click', function () {
+               let containerCheck = document.querySelector('#container-check');
+               let div = document.querySelector('#container-input');
+               
+               console.log(containerCheck.innerHTML)
 
-         document.querySelector('.button').addEventListener('click',function(){
-            let containerCheck = document.querySelector('#container-check');
-            let div = document.querySelector('#container-input');
-            if(containerCheck.textContent){
-               window.location.href="../Questions/index.html";
-            }else{
-               let pulsante = document.querySelector('#button');
-               let span = document.createElement('span');
-               span.textContent = 'Please fill the field';
-               div.append(span)
-            }
-
+               if (containerCheck.innerHTML) {
+                  window.location.href = "../Questions/index.html";
+               } else {
+                  let divButton = document.querySelector('#container-checkbox');
+                  let span = document.createElement('p');
+                  span.textContent = 'Please fill the field';
+                  span.classList.add('alert')
+                  divButton.prepend(span)
+               }
          });
-         
 
-         
+
+
       </script>
    </div>
 </body>
