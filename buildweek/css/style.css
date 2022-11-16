@@ -99,21 +99,22 @@ main {
 /*
     stile messagio di errore
 */
+.check{
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
 .messages{
     background-color: transparent;
     display: none;
     color: red;
-    padding-bottom: 10px;
-    position: absolute;
-    bottom: 85px;
-    left: 90px
+    padding-left: 30px;
 }
 
 #container-input {
     display: flex;
     justify-content: space-between;/*Posiziona gli elementi mettendo il massimo spazio tra loro*/
     align-items: center;
-    margin-top: 110px;
     max-width: 800px;/*si mette una larghezza massima altrimenti il pulsante si andrebbe a posizionare all'estremità opposta*/
 }
 
