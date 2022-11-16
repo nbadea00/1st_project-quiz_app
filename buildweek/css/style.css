@@ -476,7 +476,10 @@ Footer question
 #buttonRates {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 100px;
     width: 70%;
+    position: fixed;
+    bottom: 0;
 }
 
 /*stile bottone*/
