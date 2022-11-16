@@ -13,11 +13,16 @@ body {
 }
 
 #bg {
-    background-image: url(../assets/bg.jpg);/*percorso del immagine*/
-    background-position: center;/*metto l'immagine centrata*/
-    background-repeat: no-repeat;/*l'immagine non si deve ripetere*/
-    background-size: cover;/*serve per far riempire all'immagine tutto il div*/
-    box-sizing: border-box;/*elimina il padding in eccesso*/
+    background-image: url(../assets/bg.jpg);
+    /*percorso del immagine*/
+    background-position: center;
+    /*metto l'immagine centrata*/
+    background-repeat: no-repeat;
+    /*l'immagine non si deve ripetere*/
+    background-size: cover;
+    /*serve per far riempire all'immagine tutto il div*/
+    box-sizing: border-box;
+    /*elimina il padding in eccesso*/
     width: 100%;
     height: 100%;
     padding: 35px 70px;
@@ -42,7 +47,7 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
-.alert{
+.alert {
     font-size: 1.2rem;
     color: red;
     text-decoration: solid;
@@ -75,6 +80,7 @@ main {
     font-weight: bold;
     padding-bottom: 10px;
 }
+
 /*Paragrafo*/
 .description {
     max-width: 520px;
@@ -88,6 +94,7 @@ main {
 .list {
     padding-left: 25px;
 }
+
 .list-elements {
     padding: 5px 0;
 }
@@ -99,12 +106,13 @@ main {
 /*
     stile messagio di errore
 */
-.check{
+.check {
     display: flex;
     flex-direction: column;
     margin-top: 110px;
 }
-.messages{
+
+.messages {
     background-color: transparent;
     display: none;
     color: red;
@@ -113,9 +121,11 @@ main {
 
 #container-input {
     display: flex;
-    justify-content: space-between;/*Posiziona gli elementi mettendo il massimo spazio tra loro*/
+    justify-content: space-between;
+    /*Posiziona gli elementi mettendo il massimo spazio tra loro*/
     align-items: center;
-    max-width: 800px;/*si mette una larghezza massima altrimenti il pulsante si andrebbe a posizionare all'estremità opposta*/
+    max-width: 800px;
+    /*si mette una larghezza massima altrimenti il pulsante si andrebbe a posizionare all'estremità opposta*/
 }
 
 #container-checkbox {
@@ -123,7 +133,8 @@ main {
 }
 
 /*checkbox stile*/
-#container-check {/*Usiamo un div per creare la checkbox*/
+#container-check {
+    /*Usiamo un div per creare la checkbox*/
     background: none;
     height: 13px;
     width: 13px;
@@ -135,16 +146,18 @@ main {
 .button {
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: 'Outfit' , sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: #0b113b;
     background-color: #00FFFF;
-    box-shadow: 0 0 30px 2px #00FFFF;/*Alone del pulsante*/
+    box-shadow: 0 0 30px 2px #00FFFF;
+    /*Alone del pulsante*/
     border: none;
     padding: 15px;
     width: 180px;
     text-align: center;
     text-decoration: none;
 }
+
 /*
     Fine Welcome page
 */
@@ -155,20 +168,23 @@ main {
     Question page
 */
 
-header{
+header {
     display: flex;
-    justify-content: space-between;/*separa il logo dal timer*/
+    justify-content: space-between;
+    /*separa il logo dal timer*/
 }
 
-.chart {/*usiamo un div per definire il cerchio*/
+.chart {
+    /*usiamo un div per definire il cerchio*/
     position: relative;
     width: 100px;
     height: 100px;
     border-radius: 50px;
-  
-  }
-  
-  .percent {/*stile della parte azzurra del cerchio*/
+
+}
+
+.percent {
+    /*stile della parte azzurra del cerchio*/
     position: absolute;
     width: 50px;
     height: 100px;
@@ -176,9 +192,9 @@ header{
     left: 50px;
     transform-origin: left center;
     border-width: 1px;
-  }
-  
-  .percent:before {
+}
+
+.percent:before {
     content: "";
     position: absolute;
     width: 50px;
@@ -186,9 +202,10 @@ header{
     left: -50px;
     border-radius: 50px 0 0 50px;
     transform-origin: right center;
-  }
-  
-  .filler {/*stile della parte bianca del cerchio*/
+}
+
+.filler {
+    /*stile della parte bianca del cerchio*/
     position: absolute;
     width: 84px;
     height: 84px;
@@ -200,21 +217,23 @@ header{
     font-size: 25px;
     font-family: sans-serif;
 
-  }
-   .filler img {
+}
+
+.filler img {
     width: 10px;
-   }
+}
 
 
 /*
     Main question
 */
 
-#main-questions{
+#main-questions {
     padding-top: 30px;
 }
 
-.container{/*serve per allineare la domanda e le risposte*/
+.container {
+    /*serve per allineare la domanda e le risposte*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,22 +241,25 @@ header{
 }
 
 /*testo della domanda*/
-#question{
+#question {
     text-align: center;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 /*div per unire i div delle risposte*/
-#container-answers{
+#container-answers {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;/*fa andare a capo se non c'è più spazio*/
-    max-width: 60%;/*limito la larghezza per far andare a capo le risposte*/
-    margin-top: 80px;
-    gap: 15px;/*aggiunge dello spazio tra i div delle risposte*/
+    flex-wrap: wrap;
+    /*fa andare a capo se non c'è più spazio*/
+    max-width: 60%;
+    /*limito la larghezza per far andare a capo le risposte*/
+    margin-top: 50px;
+    gap: 15px;
+    /*aggiunge dello spazio tra i div delle risposte*/
 }
 
-.box-answers{
+.box-answers {
 
     /*centro i paragrafi*/
     display: flex;
@@ -245,7 +267,8 @@ header{
     justify-content: center;
     height: 70px;
     width: 350px;
-    background: none;/*per rendere trasparente lo sfondo senza intaccare le scritte e i bordi*/
+    background: transparent;
+    /*per rendere trasparente lo sfondo senza intaccare le scritte e i bordi*/
 
     /*smusso i bordi*/
     border: 3px solid white;
@@ -254,18 +277,25 @@ header{
     border-right: none;
     box-shadow: 0px 0px 1px white;
 
-    box-sizing: border-box;/*elimina il padding in eccesso*/
+    box-sizing: border-box;
+    /*elimina il padding in eccesso*/
 }
+
+.box-answers:hover {
+    background-image: linear-gradient(to top, #8e017b, #9c0181, #aa0086, #b8008b, #c60090);  
+}
+
 
 /*
     Footer question
 */
 
-#recap{
+#recap {
     text-align: center;
     margin-top: 130px;
 }
-#recap span{
+
+#recap span {
     color: #900080;
 }
 
@@ -279,11 +309,11 @@ header{
 /*
     Contenitore del titolo
 */
-.result-main{
+.result-main {
     padding-top: 20px;
 }
 
-#upside{
+#upside {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,20 +321,20 @@ header{
 }
 
 /*Titolo pagina*/
-#upside h1{
+#upside h1 {
     font-size: 2.8em;
     font-weight: 700;
 }
 
 /*sottotiiolo*/
-#upside h2{
+#upside h2 {
     font-size: 1.5rem;
     font-weight: 400;
 }
 
 
 /*parte centrale*/
-#side{
+#side {
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
@@ -312,32 +342,36 @@ header{
 }
 
 /*lato corretto*/
-#correct{
+#correct {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 136px;/*serve per fare in modo che correct e wrong siano larghi uguale*/
+    width: 136px;
+    /*serve per fare in modo che correct e wrong siano larghi uguale*/
 }
-#correct h3{
+
+#correct h3 {
     font-size: 2.4em;
     font-weight: 400;
 }
 
 /*lato errore*/
-#wrong{
+#wrong {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 136px;/*serve per fare in modo che correct e wrong siano larghi uguale*/
+    width: 136px;
+    /*serve per fare in modo che correct e wrong siano larghi uguale*/
 }
-#wrong h3{
+
+#wrong h3 {
     font-size: 2.4em;
     font-weight: 400;
     opacity: 0.8;
 }
 
 /*percentuare*/
-.percentage{
+.percentage {
     font-size: 2.4em;
 }
 
@@ -386,14 +420,14 @@ header{
 }
 
 /*contenitore del bottone*/
-#buttonRates{
+#buttonRates {
     text-align: center;
     margin-top: 50px;
     width: 70%;
 }
 
 /*stile bottone*/
-#buttonRate{
+#buttonRate {
     background-color: transparent;
     color: white;
     font-size: 1em;
@@ -403,4 +437,3 @@ header{
     padding: 0.8em 2.4em 0.8em 2.4em;
     border: 2px solid white;
 }
-
