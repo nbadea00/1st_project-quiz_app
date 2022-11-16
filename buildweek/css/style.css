@@ -160,51 +160,63 @@ header{
     justify-content: space-between;/*separa il logo dal timer*/
 }
 
-.chart {/*usiamo un div per definire il cerchio*/
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-  
-  }
-  
-  .percent {/*stile della parte azzurra del cerchio*/
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    overflow: hidden;
-    left: 50px;
-    transform-origin: left center;
-    border-width: 1px;
-  }
-  
-  .percent:before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    left: -50px;
-    border-radius: 50px 0 0 50px;
-    transform-origin: right center;
-  }
-  
-  .filler {/*stile della parte bianca del cerchio*/
-    position: absolute;
-    width: 84px;
-    height: 84px;
-    left: 8px;
-    top: 8px;
-    border-radius: 42px;
-    text-align: center;
-    line-height: 84px;
-    font-size: 25px;
+/* timer */
+
+  #timer{
     font-family: sans-serif;
+    display: grid;
+    height: 20vh;
+    place-items: center;
+    color: #00FFFF;
 
   }
-   .filler img {
-    width: 10px;
-   }
+  .base-timer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: hsl(0, 0%, 100% , 0.32);
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: square;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: #00FFFF;
+  }
 
+  .base-timer__label {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight:lighter;
+    text-align: center;
+  }
+    
+    
+    
 
 /*
     Main question
