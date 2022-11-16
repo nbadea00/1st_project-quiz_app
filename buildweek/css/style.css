@@ -174,60 +174,15 @@ header {
     /*separa il logo dal timer*/
 }
 
-<<<<<<< HEAD
 /* timer */
 
   #timer{
-=======
-.chart {
-    /*usiamo un div per definire il cerchio*/
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-
-}
-
-.percent {
-    /*stile della parte azzurra del cerchio*/
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    overflow: hidden;
-    left: 50px;
-    transform-origin: left center;
-    border-width: 1px;
-}
-
-.percent:before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    left: -50px;
-    border-radius: 50px 0 0 50px;
-    transform-origin: right center;
-}
-
-.filler {
-    /*stile della parte bianca del cerchio*/
-    position: absolute;
-    width: 84px;
-    height: 84px;
-    left: 8px;
-    top: 8px;
-    border-radius: 42px;
-    text-align: center;
-    line-height: 84px;
-    font-size: 25px;
->>>>>>> 0647989596ae46ec686c187535237341c95d3778
     font-family: sans-serif;
     display: grid;
     height: 20vh;
     place-items: center;
     color: #00FFFF;
 
-<<<<<<< HEAD
   }
   .base-timer {
     position: relative;
@@ -258,13 +213,6 @@ header {
     fill-rule: nonzero;
     stroke: #00FFFF;
   }
-=======
-}
-
-.filler img {
-    width: 10px;
-}
->>>>>>> 0647989596ae46ec686c187535237341c95d3778
 
   .base-timer__label {
     position: absolute;
@@ -452,8 +400,8 @@ Footer question
 
 .circle-bg {
     fill: none;
-    stroke: #D20094;
-    stroke-width: 0.4em;
+    stroke: #00FFFF;
+    stroke-width: 0.39em;
     border: none;
 }
 
@@ -464,6 +412,21 @@ Footer question
     animation: progress 1s ease-out forwards;
 }
 
+.pop-up-correct {
+    position: absolute;
+    top: 405px;
+    left:40%;
+    visibility: hidden;
+    z-index: 1;
+}
+.pop-up-wrong{
+    position: absolute;
+    top: 300px;
+    left:55%;
+    visibility: hidden;
+    z-index: 1;
+}
+
 @keyframes progress {
     0% {
         stroke-dasharray: 0 100;
@@ -471,7 +434,7 @@ Footer question
 }
 
 .circular-chart.blue .circle {
-    stroke: #00FFFF;
+    stroke: #D20094;
 }
 
 .risult-text {
