@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+
+
+body {
   height: 100%;
   width: 100%;
   background-image: url(assets/bg.jpg);
@@ -27,14 +29,16 @@
   line-height: 40px;
 }
 
-svg {
+svg  {
   position: absolute;
   top: 0;
   right: 0;
   width: 40px;
   height: 40px;
   transform: rotateY(-180deg) rotateZ(-90deg);
+  
 }
+
 
 svg circle {
     
@@ -42,10 +46,20 @@ svg circle {
   stroke-dashoffset: 0px;
   stroke-linecap: round;
   stroke-width: 2px;
-  stroke: #00FFFF;
+  stroke:#00FFFF;
   fill: none;
   animation: countdown 10s linear infinite forwards;
+  background-color: white;
 }
+
+
+
+
+
+
+
+
+
 
 @keyframes countdown {
   from {
@@ -66,16 +80,37 @@ svg circle {
       </div>
 
     <script>
+
     var countdownNumberEl = document.getElementById('countdown-number');
+
     var countdown = 60;
+
+
+    var colore2 = '#ffffff';
+
 
     countdownNumberEl.textContent = countdown;
 
     setInterval(function() {
     countdown = --countdown <= 0 ? 60 : countdown;
-
+    
     countdownNumberEl.textContent = countdown;
-    }, 1000);
+    }, 165);    
+
+    if (setInterval ()) {
+      countdown =colore2
+    }
+    setInterval()
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>

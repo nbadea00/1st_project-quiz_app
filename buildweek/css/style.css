@@ -42,6 +42,13 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
+.alert{
+    font-size: 1.2rem;
+    color: red;
+    text-decoration: solid;
+    margin-right: 5px;
+}
+
 /*----------------------------------------------------------------*/
 
 /*
@@ -141,6 +148,7 @@ header{
     width: 100px;
     height: 100px;
     border-radius: 50px;
+  
   }
   
   .percent {/*stile della parte azzurra del cerchio*/
@@ -174,7 +182,12 @@ header{
     line-height: 84px;
     font-size: 25px;
     font-family: sans-serif;
+
   }
+   .filler img {
+    width: 10px;
+   }
+
 
 /*
     Main question
@@ -303,6 +316,7 @@ header{
 #wrong h3{
     font-size: 2.4em;
     font-weight: 400;
+    opacity: 0.8;
 }
 
 /*percentuare*/
@@ -312,7 +326,7 @@ header{
 
 /*cerchio risultato*/
 .single-chart {
-    width: 280px;
+    width: 300px;
     justify-content: space-around;
 }
 
@@ -325,14 +339,19 @@ header{
 
 .circle-bg {
     fill: none;
+<<<<<<< HEAD
     stroke: #00FFFF;
+    stroke-width: 0.4em;
+=======
+    stroke:  #D20094;
     stroke-width: 4;
+>>>>>>> 6ebfc0483b44695e8ce8ed77c0230802549663ce
     border: none;
 }
 
 .circle {
     fill: none;
-    stroke-width: 4;
+    stroke-width: 0.4em;
     stroke-dasharray: 85, 100;
     animation: progress 1s ease-out forwards;
 }
@@ -344,15 +363,16 @@ header{
 }
 
 .circular-chart.blue .circle {
-    stroke: #D20094;
+    stroke: #00FFFF;
 }
 
 .risult-text {
-    fill: #D20094;
+    fill: #00FFFF;
     font-family: sans-serif;
     font-size: 0.5em;
     text-anchor: middle;
 }
+
 /*contenitore del bottone*/
 #buttonRates{
     text-align: center;
