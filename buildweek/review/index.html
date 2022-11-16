@@ -54,16 +54,8 @@
             border-bottom: 1px solid #d20094;
             background-color: transparent;
             padding-bottom: 7px;
-<<<<<<< HEAD:buildweek/rewiew/index.html
             width: 200px;
-=======
             outline: none;
-            color: white;
-            opacity: 0.8;
-            font-size: 1em;
-            
-
->>>>>>> 7f88c3ef73ffdb552296bb1b1fa9ca271066f927:buildweek/review/index.html
         }
 
         #div-comment{
@@ -97,6 +89,11 @@
         list-style: none;
         }
 
+        .rating-list li:checked,
+        .rating-list li:checked ~ li {
+            float: right;
+        color: aqua;
+        }
     </style>
 </head>
 <body>
@@ -153,13 +150,11 @@
 
      <script>
 
-        document.getElementById('li')
-        .addEventListener('click', function(){
+        let x = document.querySelector('ul')
 
-            
-            
-        })
-      
+        document.getElementsByClassName
+
+
      
      </script>
 </body>
