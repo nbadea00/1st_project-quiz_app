@@ -285,9 +285,8 @@ header {
     background-image: linear-gradient(to top, #8e017b, #9c0181, #aa0086, #b8008b, #c60090);  
 }
 
-
 /*
-    Footer question
+Footer question
 */
 
 #recap {
@@ -299,6 +298,9 @@ header {
     color: #900080;
 }
 
+#recap .domanda{
+    color: white;
+}
 /*----------------------------------------------------------------*/
 
 /*
