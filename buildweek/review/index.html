@@ -54,7 +54,16 @@
             border-bottom: 1px solid #d20094;
             background-color: transparent;
             padding-bottom: 7px;
+<<<<<<< HEAD:buildweek/rewiew/index.html
+            width: 200px;
+=======
+            outline: none;
+            color: white;
+            opacity: 0.8;
+            font-size: 1em;
             
+
+>>>>>>> 7f88c3ef73ffdb552296bb1b1fa9ca271066f927:buildweek/review/index.html
         }
 
         #div-comment{
@@ -62,6 +71,20 @@
             text-align: center;
         }
 
+        #star{
+            font-size: 2em;
+            color: rgb(65, 1, 126);
+        }
+
+        #s1,#s2,#s3,#s4,#s5,#s6,#s7,#s8,#s9,#s10{
+            display: inline;
+        }
+
+        .star{
+            font-size: 2em;
+            color: rgb(65, 1, 126);
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -81,23 +104,49 @@
             </div>
 
             <div id="rating">
-                <!-- <img src="../assets/star.svg" alt="star"> da fare in js-->
-                <img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/star.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt=""><img id="star" src="../assets/blacksStar.svg" alt="">
+
+                <i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i>
+
             </div>
 
             <div id="feedback">
+
                 <p>
                     Leave us an open feedback about your experience so far
                 </p>
+
             </div>
+
             <div id="div-comment">
-             <input type="text" placeholder="     Write your comment here" id="comment">
+                <input type="text" placeholder="     Write your comment here" id="comment">
             </div>
+
              <div>
-             <button class="button">MORE INFO</button>
+                <button class="button">MORE INFO</button>
             </div>
         </main>
   
      </div>
+
+     <script>
+
+        
+       // document.querySelector('#star').style.color = "aqua"
+
+        const result = document.getElementById('result')
+        const star = document.getElementsByClassName('star')
+
+        .addEventListener('hover', function(){
+
+            result.forEach(star => {
+                
+                
+            });
+        })
+
+        
+        
+
+     </script>
 </body>
 </html>
