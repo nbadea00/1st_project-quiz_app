@@ -47,18 +47,16 @@ svg circle {
   stroke-linecap: round;
   stroke-width: 2px;
   stroke:#00FFFF;
+  stroke-linecap: square;
   fill: none;
   animation: countdown 10s linear infinite forwards;
-  background-color: white;
+  
 }
 
-
-
-
-
-
-
-
+.bianco {
+ border: 5px solid white;
+ border-radius:50%;
+}  bianco da sovrappore*/
 
 
 @keyframes countdown {
@@ -74,34 +72,32 @@ svg circle {
 <body>
     <div id="countdown">
         <div id="countdown-number"></div>
+        - <svg cLass="bianco">
+          <circle  r="18" cx="20" cy="20"></circle>
+        </svg> creato due cerchi da sovrappore -->
         <svg>
-          <circle r="18" cx="20" cy="20"></circle>
+          <circle  r="18" cx="20" cy="20"></circle>   
         </svg>
+       
       </div>
-
+   
     <script>
 
     var countdownNumberEl = document.getElementById('countdown-number');
 
     var countdown = 60;
 
-
-    var colore2 = '#ffffff';
-
-
     countdownNumberEl.textContent = countdown;
 
     setInterval(function() {
     countdown = --countdown <= 0 ? 60 : countdown;
-    
     countdownNumberEl.textContent = countdown;
     }, 165);    
 
-    if (setInterval ()) {
-      countdown =colore2
-    }
-    setInterval()
 
+    
+
+   
 
 
 
