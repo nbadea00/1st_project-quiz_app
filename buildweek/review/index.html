@@ -67,20 +67,32 @@
             text-align: center;
         }
 
-        #star{
-            font-size: 2em;
-            color: rgb(65, 1, 126);
-        }
-
-        #s1,#s2,#s3,#s4,#s5,#s6,#s7,#s8,#s9,#s10{
-            display: inline;
-        }
 
         .star{
             font-size: 2em;
             color: rgb(65, 1, 126);
             margin-right: 10px;
+
         }
+
+        .rating-list li {
+        float: right;
+        color: rgb(47, 9, 49);
+        padding-left:  10px;
+        font-size: 2em;
+        
+        }
+
+        .rating-list li:hover,
+        .rating-list li:hover ~ li {
+        color: aqua;
+        }
+
+        .rating-list {
+        display: inline-block;
+        list-style: none;
+        }
+
     </style>
 </head>
 <body>
@@ -101,7 +113,18 @@
 
             <div id="rating">
 
-                <i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i><i class="fas fa-star star" ></i>
+                <ul class="list-inline rating-list">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
 
             </div>
 
@@ -114,7 +137,7 @@
             </div>
 
             <div id="div-comment">
-                <input type="text" placeholder="     Write your comment here" id="comment">
+                <input type="text" placeholder="   Write your comment here" id="comment">
             </div>
 
              <div>
@@ -126,23 +149,14 @@
 
      <script>
 
-        
-       // document.querySelector('#star').style.color = "aqua"
+        document.getElementById('li')
+        .addEventListener('click', function(){
 
-        const result = document.getElementById('result')
-        const star = document.getElementsByClassName('star')
-
-        .addEventListener('hover', function(){
-
-            result.forEach(star => {
-                
-                
-            });
+            
+            
         })
-
-        
-        
-
+      
+     
      </script>
 </body>
 </html>
