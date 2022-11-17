@@ -71,28 +71,11 @@ function startTimer() {
 
 function formatTime(time) {
     const minutes = Math.floor(time / 60);
-    let seconds = time % 60; 
-
-    if (seconds <= 0) {
-        seconds = `${seconds}`;
-    }
-
-    return `SECONDS <br> <b> ${seconds}</b> <br> REMAINING`;
+    let seconds = time; 
+    
+    
+    return `<p>SECONDS</p><p><b>${seconds}</b></p><p>REMAINING</p>`;
 }
-
-function formaText(text){
-seconds = 
-
-}
-
-
-
-
-
-
-
-
-
 
 
 function setRemainingPathColor(timeLeft) {

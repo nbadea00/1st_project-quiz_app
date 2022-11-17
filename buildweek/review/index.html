@@ -56,6 +56,7 @@
             padding-bottom: 7px;
             width: 200px;
             outline: none;
+            color : white;
         }
 
         #div-comment{
@@ -71,10 +72,6 @@
         
         }
 
-        .rating-list li:hover,
-        .rating-list li:hover ~ li {
-        color: aqua;
-        }
 
         .rating-list {
         display: inline-block;
@@ -102,16 +99,7 @@
             <div id="rating">
 
                 <ul class="list-inline rating-list">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
+                    
                   </ul>
 
             </div>
@@ -137,12 +125,50 @@
 
      <script>
 
-        let x = document.querySelector('ul')
+        {
+            let stars = [];
 
-        document.getElementsByClassName
+            for( let i = 0; i < 10 ; i++ ){
+                let ul = document.querySelector('.list-inline');
+                let li = document.createElement('li')
+                li.innerHTML = '<i class="fa fa-star"></i>';
 
+                /*
+                li.addEventListener('click', function(){
+                    for( let i = stars.length-1; i >= stars.indexOf(this) ; i-- ){
+                        stars[i].style.color = 'rgb(15, 255, 255)';
+                    }
+                    for( let i = stars.indexOf(this)-1; i >= 0 ; i-- ){
+                        stars[i].style.color = 'rgb(47, 9, 49)';
+                    }
+                })
+                */
+                li.onmouseover = function(){
+                    for( let i = stars.length-1; i >= stars.indexOf(this) ; i-- ){
+                        stars[i].style.color = 'rgb(15, 255, 254)';
+                    }
+                    for( let i = stars.indexOf(this)-1; i >= 0 ; i-- ){
+                        stars[i].style.color = 'rgb(47, 9, 49)';
+                    }
+                }
+                /*
+                li.onmouseleave = function(){
+                    if( this.style.color != 'rgb(15, 255, 255)'){
+                        for( let i = stars.length-1; i >= stars.indexOf(this) ; i-- ){
+                            stars[i].style.color = 'rgb(47, 9, 49)';
+                        }
+                    }
+                }
+                */
+                
+                ul.append(li);
+                stars.push(li);
+            }
 
-     
+            document.querySelector('.button').addEventListener('click', function(){
+                window.location.href = '../welcomepage/index.html';
+            })
+        }
      </script>
 </body>
 </html>
