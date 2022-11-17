@@ -113,9 +113,7 @@ main {
 }
 
 .messages {
-    border: 1px solid orange;
-    background-color: white;
-    max-width: 170px;
+    background-color: transparent;
     display: none;
     color: red;
     padding-left: 30px;
@@ -366,6 +364,7 @@ Footer question
 
 /*lato corretto*/
 #correct {
+    font-family: "Outfit" , sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -380,34 +379,38 @@ Footer question
 
 /*lato errore*/
 #wrong {
+    font-family: "Outfit" , sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 136px;
+    opacity: 0.8;
+    text-align: right;
     /*serve per fare in modo che correct e wrong siano larghi uguale*/
 }
 
 #wrong h3 {
     font-size: 2.4em;
     font-weight: 400;
-    opacity: 0.8;
 }
 
 /*percentuare*/
 .percentage {
-    font-size: 2.4em;
+    font-size: 3em;
+    font-weight: bolder;
 }
 
 /*cerchio risultato*/
 .single-chart {
-    width: 300px;
+    
     justify-content: space-around;
 }
 
 .circular-chart {
     display: block;
     margin: 0px auto;
-    max-height: 400px;
+    
+    height: 500px;
 }
 
 .circle-bg {
@@ -477,13 +480,39 @@ Footer question
     stroke: #D20094;
 }
 
-.risult-text {
+/*.risult-text {
     fill: #00FFFF;
     font-family: sans-serif;
-    font-size: 0.5em;
+    font-size: 2px;
     text-anchor: middle;
-}
 
+}*/
+#risultato{
+    font-size: 16px;
+    position: absolute;
+    top: 392px;
+    left: 43.2%;
+    max-width: 265px;
+    text-align: center;
+    line-height: 1.5em;
+    
+}
+#risultato b{
+    font-size: 20px;
+    font-weight: 600;
+}
+#risultato p{
+    margin-top: 30px;
+    opacity: 0.8;
+}
+#risultato span{
+    color: #00FFFF;
+}
+.notpass{
+    font-size: 20px;
+    padding-top: 24px;
+    line-height: 1.5em;
+}
 /*contenitore del bottone*/
 #buttonRates {
     text-align: center;

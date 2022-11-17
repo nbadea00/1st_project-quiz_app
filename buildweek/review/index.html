@@ -26,6 +26,10 @@
             padding: 0 115px 35px 115px;
             font-weight: 300;
         }
+        #subtitle p{
+            max-width: 650px;
+            line-height: 1.3em;
+        }
         
         #feedback{
             font-size: 1.6em;
@@ -35,11 +39,15 @@
         }
 
         main{
+            display: flex;
+            flex-direction: column;
             text-align: center;
+            align-items: center;
         }
 
         #star{
             padding-right: 12.2px;
+            
         }
 
         #rating{
@@ -48,13 +56,11 @@
 
         #comment
         {
-            margin: 0 0 60px 10px;
-            padding-right: 500px;
             border: none;
-            border-bottom: 1px solid #d20094;
+            /* border-bottom: 1px solid #d20094; */
             background-color: transparent;
             padding-bottom: 7px;
-            width: 200px;
+            width: 670px;
             outline: none;
             color : white;
         }
@@ -62,6 +68,9 @@
         #div-comment{
             text-align: left;
             text-align: center;
+            max-width: 800px;
+            border-bottom: 1px solid #D20094;
+            margin-bottom: 60px;
         }
 
 
@@ -74,9 +83,10 @@
 
         .rating-list li {
         float: right;
-        color: rgb(47, 9, 49);
+        color: #0b113b;
         padding-left:  10px;
-        font-size: 2em;
+        font-size: 2.74em;
+        text-shadow: 0px 0px 1px black;
         
         }
 
@@ -156,7 +166,7 @@
                         stars[i].style.color = 'rgb(15, 255, 254)';
                     }
                     for( let i = stars.indexOf(this)-1; i >= 0 ; i-- ){
-                        stars[i].style.color = 'rgb(47, 9, 49)';
+                        stars[i].style.color = '#0b113b';
                     }
                 }
                 /*

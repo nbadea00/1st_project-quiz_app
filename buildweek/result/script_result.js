@@ -1,5 +1,5 @@
 {
-    let voto = localStorage.getItem('voto')
+    let voto = localStorage.getItem('voto');
     let numDomande = 10;
     let perGiuste = (voto / numDomande) * 100;
     let perErrato = 100 - perGiuste;
@@ -11,7 +11,12 @@
     document.querySelector('#correct .question').textContent = voto + "/10" + " questions"
     document.querySelector('#wrong .question').textContent = (numDomande - voto) + "/10" + " questions"
     document.querySelector('.circle').style.strokeDasharray = `${perErrato}, 100`
-    document.querySelector('.risult-text').textContent = perGiuste + "%";
+    
+    if(perGiuste >= 60){
+        document.querySelector('#risultato').innerHTML =  `<b>Congratulations!<br><span>You passed the exam.</span></b><p> We'll send you the certificate <br>in few minutes.<br>Check your email (including promotions / spam folder)`;
+    }else{
+        document.querySelector('#risultato').innerHTML =  `<p class="notpass">Oh no! Unfortunately you didn't pass it.</p>`;
+    }
 
     let popWrong = document.querySelector('.pop-up-wrong');
     let popCorrect = document.querySelector('.pop-up-correct');
