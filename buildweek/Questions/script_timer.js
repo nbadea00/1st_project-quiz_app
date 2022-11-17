@@ -72,7 +72,6 @@ function startTimer() {
 function formatTime(time) {
     const minutes = Math.floor(time / 60);
     let seconds = time; 
-    console.log(seconds);
     
     
     return `<p>SECONDS</p><p><b>${seconds}</b></p><p>REMAINING</p>`;

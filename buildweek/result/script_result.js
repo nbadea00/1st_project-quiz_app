@@ -53,5 +53,4 @@
     document.querySelector('#buttonRate').addEventListener('click', function(){
         window.location.href = '../review/index.html'
     })
-    
 }
