@@ -113,7 +113,9 @@ main {
 }
 
 .messages {
-    background-color: transparent;
+    border: 1px solid orange;
+    background-color: white;
+    max-width: 170px;
     display: none;
     color: red;
     padding-left: 30px;
@@ -405,20 +407,19 @@ Footer question
 .circular-chart {
     display: block;
     margin: 0px auto;
-    max-width: 80%;
-    max-height: 250px;
+    max-height: 400px;
 }
 
 .circle-bg {
     fill: none;
     stroke: #00FFFF;
-    stroke-width: 0.39em;
+    stroke-width: 0.3em;
     border: none;
 }
 
 .circle {
     fill: none;
-    stroke-width: 0.4em;
+    stroke-width: 0.31em;
     stroke-dasharray: 85, 100;
     animation: progress 1s ease-out forwards;
 }
