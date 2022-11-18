@@ -4,9 +4,9 @@
     let voto = localStorage.getItem('voto');
     let namberQuestion = localStorage.getItem('namberQuestion');
 
-    let perGiuste = (voto / namberQuestion) * 100;              // % giuste
-    let perErrato = 100 - perGiuste;                            // % sbagliate
-    const pixY = 400;
+    let perGiuste = ((voto / namberQuestion) * 100).toFixed(2);              // % giuste
+    let perErrato = (100 - perGiuste).toFixed(2);                            // % sbagliate
+    const pixY = 475;
     const pixX = 6;
 
     // scrittura a schermo dei parametri
@@ -37,8 +37,8 @@
     // posizionamento dei popup sulle rispsettive barre colorate
     document.querySelector('.circle').onmousemove = function () {                   // comparsa popup al passaggio del mouse sulla rispettiva barra colorata
         popWrong.style.visibility = 'visible'
-        let y = 405 + Number(pixY * perErrato / 100);                               // calcolo della posizione y in base alla posizione ricevuta
-        let x = 51 + Number(pixX - pixX * (Math.abs(50 - perErrato) / 100));        // calcolo della posizione x in base alla posizione ricevuta
+        let y = 250 + Number(pixY * perErrato / 100);                             // calcolo della posizione y in base alla posizione ricevuta
+        let x = 52 + Number(pixX - pixX * (Math.abs(50 - perErrato) / 100));        // calcolo della posizione x in base alla posizione ricevuta
         popWrong.style.top = `${y}px`;
         popWrong.style.left = `${x}%`;
     }
@@ -48,8 +48,8 @@
 
     document.querySelector('.circle-bg').onmousemove = function () {
         popCorrect.style.visibility = 'visible'
-        let y = 405 + Number(pixY * perGiuste / 100);                               
-        let x = 43 - Number(pixX - pixX * (Math.abs(50 - perGiuste) / 100));
+        let y = 250 + Number(pixY * perGiuste / 100);
+        let x = 41 - Number(pixX - pixX * (Math.abs(50 - perGiuste) / 100));
         popCorrect.style.top = `${y}px`;
         popCorrect.style.left = `${x}%`;
     }
