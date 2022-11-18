@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Rewiew|Epicode</title>
+</head>
+<body>
+    <div id="bg">
+        <header>
+           <div id="logo">
+              <img src="../assets/epicode_logo.png" alt="logo-epicode">
+           </div>
+        </header>
+
+        <main id="main-review">
+            <h2 id="title">Tell us how it's going</h2>
+            <div id="subtitle">
+                <p>
+                    From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague?
+                </p>
+            </div>
+
+            <div id="rating">
+
+                <ul class="list-inline rating-list">
+                    
+                  </ul>
+
+            </div>
+
+            <div id="feedback">
+
+                <p>
+                    Leave us an open feedback about your experience so far
+                </p>
+
+            </div>
+
+            <div id="div-comment">
+                <input type="text" placeholder="   Write your comment here" id="comment">
+            </div>
+
+             <div>
+                <button class="button">MORE INFO</button>
+            </div>
+        </main>
+  
+     </div>
+
+     <script>
+
+        {
+            let stars = [];
+
+            for( let i = 0; i < 10 ; i++ ){
+                let ul = document.querySelector('.list-inline');
+                let li = document.createElement('li')
+                li.innerHTML = '<i class="fa fa-star"></i>';
+
+                /*
+                li.addEventListener('click', function(){
+                    for( let i = stars.length-1; i >= stars.indexOf(this) ; i-- ){
+                        stars[i].style.color = 'rgb(15, 255, 255)';
+                    }
+                    for( let i = stars.indexOf(this)-1; i >= 0 ; i-- ){
+                        stars[i].style.color = 'rgb(47, 9, 49)';
+                    }
+                })
+                */
+                li.onmouseover = function(){
+                    for( let i = stars.length-1; i >= stars.indexOf(this) ; i-- ){
+                        stars[i].style.color = 'rgb(15, 255, 254)';
+                    }
+                    for( let i = stars.indexOf(this)-1; i >= 0 ; i-- ){
+                        stars[i].style.color = '#0b113b';
+                    }
+                }
+                /*
+                li.onmouseleave = function(){
+                    if( this.style.color != 'rgb(15, 255, 255)'){
+                        for( let i = stars.length-1; i >= stars.indexOf(this) ; i-- ){
+                            stars[i].style.color = 'rgb(47, 9, 49)';
+                        }
+                    }
+                }
+                */
+                
+                ul.append(li);
+                stars.push(li);
+            }
+
+            document.querySelector('.button').addEventListener('click', function(){
+                window.location.href = '../welcomepage/welcome.html';
+            })
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+/*
+    Fonts import
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Outfit:wght@400;700&display=swap%27');
+
+/*
+    Impostazioni generali
+*/
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    display: flex;
+    height: 100vh;
+    ;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right top, #0b113b, #1f1648, #321b54, #471e5f, #5c2168);
+}
+
+#bg {
+    background-image: url(../assets/bg.jpg);
+    /*percorso del immagine*/
+    background-position: center;
+    /*metto l'immagine centrata*/
+    background-repeat: no-repeat;
+    /*l'immagine non si deve ripetere*/
+    background-size: cover;
+    /*serve per far riempire all'immagine tutto il div*/
+    box-sizing: border-box;
+    /*elimina il padding in eccesso*/
+    height: 768px;
+    width: 1024px;
+    padding: 35px 70px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.subtitles {
+    font-size: 30px;
+    font-family: 'Outfit', sans-serif;
+}
+
+#logo img {
+    width: 180px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-title {
+    line-height: 4rem;
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.alert {
+    font-size: 1.2rem;
+    color: #F95A37;
+    text-decoration: solid;
+    background-color: white;
+    padding: 10px;
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius: 15px ;
+    border: 2px solid #c2128d;
+}
+
+/*----------------------------------------------------------------*/
+
+/*
+    Welcome page
+*/
+
+/*
+    Main Welcome
+*/
+main {
+    padding-top: 80px;
+}
+
+/*Titolo pagina*/
+.titolo-welcome {
+    max-width: 450px;
+    padding-bottom: 50px;
+    line-height: 2.8rem;
+}
+
+/*sottotitolo*/
+.welcome-purple {
+    color: #c2128d;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/*Paragrafo*/
+.description {
+    max-width: 520px;
+    padding-bottom: 50px;
+    line-height: 1.5rem;
+}
+
+/*
+    lista 
+*/
+.list {
+    padding-left: 25px;
+}
+
+.list-elements {
+    padding: 5px 0;
+}
+
+/*
+    Checkbox e pulsante in fondo alla pagina
+*/
+
+/*
+    stile messagio di errore
+*/
+.check {
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
+
+.messages {
+    background-color: transparent;
+    display: none;
+    color: red;
+    padding-left: 20px;
+}
+
+#container-input {
+    display: flex;
+    justify-content: space-between;
+    /*Posiziona gli elementi mettendo il massimo spazio tra loro*/
+    align-items: center;
+    max-width: 800px;
+    /*si mette una larghezza massima altrimenti il pulsante si andrebbe a posizionare all'estremità opposta*/
+}
+
+#container-checkbox {
+    display: flex;
+}
+
+/*checkbox stile*/
+#container-check {
+    /*Usiamo un div per creare la checkbox*/
+    background: none;
+    height: 13px;
+    width: 13px;
+    border: solid 2px white;
+    margin-right: 15px;
+}
+
+/*stile pulsante*/
+.button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    color: #0b113b;
+    background-color: #00FFFF;
+    box-shadow: 0 0 30px 2px #00FFFF;
+    /*Alone del pulsante*/
+    border: none;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*
+    Fine Welcome page
+*/
+
+/*----------------------------------------------------------------*/
+
+/*
+    Question page
+*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /*separa il logo dal timer*/
+}
+
+/* timer */
+
+#timer {
+    font-family: sans-serif;
+    display: grid;
+    height: 150px;
+    place-items: center;
+    color: #00FFFF;
+
+}
+
+.base-timer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.base-timer__svg {
+    transform: scaleX(1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: hsl(0, 0%, 100%, 0.32);
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: square;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: #00FFFF;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+
+
+
+/*
+    Main question
+*/
+
+.form-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    height: 300px;
+}
+
+.input-numeri{
+    border: none;
+    border-bottom: 1px solid #d20094;
+    background-color: transparent;
+    padding-bottom: 7px;
+    width: 670px;
+    outline: none;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.difficulty{
+    outline: none;
+    text-align: center;;
+    width: 180px;
+    font-size: 19px;
+    padding: 15px;
+    color: white;
+    background-color: #0b113b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px black;
+}
+
+#main-questions {
+    padding-top: 30px;
+}
+
+b {
+    font-size: 2.5rem;
+}
+
+#base-timer-label {
+    color: white
+}
+
+.container {
+    /*serve per allineare la domanda e le risposte*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*testo della domanda*/
+#question {
+    text-align: center;
+    max-width: 100%;
+}
+
+#question .font-title {
+    line-height: 3rem;
+    font-size: 40px;
+}
+.notice{
+    font-size: 16px;
+    text-align: left;
+}
+
+/*div per unire i div delle risposte*/
+#container-answers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*fa andare a capo se non c'è più spazio*/
+    max-width: 90%;
+    /*limito la larghezza per far andare a capo le risposte*/
+    margin-top: 50px;
+    gap: 15px;
+    /*aggiunge dello spazio tra i div delle risposte*/
+}
+
+.box-answers {
+
+    /*centro i paragrafi*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 350px;
+    background: transparent;
+    /*per rendere trasparente lo sfondo senza intaccare le scritte e i bordi*/
+
+    /*smusso i bordi*/
+    border: 3px solid white;
+    border-radius: 50px;
+    border-bottom: none;
+    border-right: none;
+    box-shadow: 0px 0px 1px white;
+
+    box-sizing: border-box;
+    /*elimina il padding in eccesso*/
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.box-answers:hover {
+    background-image: linear-gradient(to top, #8e017b, #9c0181, #aa0086, #b8008b, #c60090);
+}
+
+/*
+Footer question
+*/
+
+#recap {
+    text-align: center;
+    margin-top: 130px;
+    font-size: 20px;
+}
+
+.purple {
+    color: #900080;
+}
+
+.domanda {
+    color: white;
+}
+
+/*----------------------------------------------------------------*/
+
+/*
+    Result page
+*/
+
+
+/*
+    Contenitore del titolo
+*/
+.result-main {
+    padding-top: 20px;
+}
+
+#upside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+/*Titolo pagina*/
+#upside h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+/*sottotiiolo*/
+#upside h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+/*parte centrale*/
+#side {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    width: 100%;
+}
+
+/*lato corretto*/
+#correct {
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 136px;
+    /*serve per fare in modo che correct e wrong siano larghi uguale*/
+}
+
+#correct h3 {
+    font-size: 2.4em;
+    font-weight: 400;
+}
+
+/*lato errore*/
+#wrong {
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 136px;
+    opacity: 0.8;
+    text-align: right;
+    /*serve per fare in modo che correct e wrong siano larghi uguale*/
+}
+
+#wrong h3 {
+    font-size: 2.4em;
+    font-weight: 400;
+}
+
+/*percentuare*/
+.percentage {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+/*cerchio risultato*/
+.single-chart {
+
+    justify-content: space-around;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0px auto;
+    height: 400px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #00FFFF;
+    stroke-width: 0.3em;
+    border: none;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 0.31em;
+    stroke-dasharray: 85, 100;
+    animation: progress 1s ease-out forwards;
+}
+
+.pop-up-correct {
+    position: absolute;
+    top: 405px;
+    left: 38%;
+    visibility: hidden;
+    z-index: 1;
+
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blu {
+    width: 16px;
+    height: 16px;
+    background-color: #00FFFF;
+    margin-right: 2px;
+}
+
+.pop-up-wrong {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viola {
+    width: 16px;
+    height: 16px;
+    background-color: #D20094;
+    margin-right: 2px;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.blue .circle {
+    stroke: #D20094;
+}
+
+#risultato {
+    font-size: 16px;
+    position: relative;
+    /*top: 540px;
+    left: 44.3%;*/
+    height: 0px;
+    top: 160px;
+    max-width: 265px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+#risultato b {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#risultato p {
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+#risultato span {
+    color: #00FFFF;
+}
+
+.notpass {
+    font-size: 20px;
+    padding-top: 24px;
+    line-height: 1.5em;
+}
+
+/*contenitore del bottone*/
+#buttonRates {
+    text-align: center;
+    margin-top: 50px;
+    width: 70%;
+}
+
+/*stile bottone*/
+#buttonRate {
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.8em 2.4em 0.8em 2.4em;
+    border: 2px solid white;
+}
+/*
+    Review page
+*/
+#title{
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.8em;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+/*
+#subtitle{
+    font-size: 1.6em;
+    font-family: 'Outfit', sans-serif;
+    padding: 0 115px 35px 115px;
+    font-weight: 300;
+}*/
+#subtitle p{
+    max-width: 650px;
+    line-height: 1.3em;
+    font-size: 1.5rem;
+}
+
+
+#feedback{
+    font-size: 1.6em;
+    font-family: 'Outfit', sans-serif;
+    padding-bottom: 35px;
+    font-weight: 300;
+}
+
+#main-review{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#rating{
+    padding-bottom: 90px;
+    margin-top: 15px;
+}
+
+#div-comment{
+    text-align: left;
+    text-align: center;
+    max-width: 800px;
+    border-bottom: 1px solid #D20094;
+    margin-bottom: 60px;
+}
+#comment
+{
+    border: none;
+    background-color: transparent;
+    padding-bottom: 7px;
+    width: 670px;
+    outline: none;
+    color : white;
+    font-size : 16px;
+}
+
+
+.rating-list {
+display: inline-block;
+list-style: none;
+}
+.rating-list li {
+float: right;
+color: #0b113b;
+padding-left:  10px;
+font-size: 2.74em;
+text-shadow: 0px 0px 1px black;
+
+}

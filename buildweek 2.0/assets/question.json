@@ -1,0 +1,19 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Science: Computers",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What does GHz stand for?",
+            "correct_answer": [
+                "1aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaa",
+                "1aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaa"
+            ],
+            "incorrect_answers": [
+                "Gigahaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaotz",
+                "Gigahaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaatz"
+            ]
+        }
+    ]
+}
