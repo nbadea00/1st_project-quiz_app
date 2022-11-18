@@ -84,7 +84,7 @@
          /*permette di spuntare la checkbox*/
          document.querySelector('#container-check').addEventListener('click', function () {
             if (this.innerHTML == '') {/*se la checkbox è vuota allora inserisco l'immagine del tick*/
-            document.querySelector(".messages").remove()
+            document.querySelector(".messages").style.display = 'none';
             
 
                this.innerHTML = '<i class="fas fa-check"></i>';
@@ -101,11 +101,13 @@
             } else {
                let divMessages = document.querySelector('.messages');/*seleziono il div per inserire il messaggio*/
                if (divMessages.style.display != 'block') {/*se è stato inserito il messaggio allora il display è block quindi anche se riclicato il bottone non crea un nuovo messaggio ma rimane quello precedente*/
-                  let span = document.createElement('span');/*creo uno span*/
-                  span.textContent = 'Please fill the field!';/*scrivo il messaggio*/
-                  span.classList.add('alert')/*aggiungo la classe per lo stile*/
+                  if(divMessages.style.display != 'none'){
+                     let span = document.createElement('span');/*creo uno span*/
+                     span.textContent = 'Please fill the field!';/*scrivo il messaggio*/
+                     span.classList.add('alert')/*aggiungo la classe per lo stile*/
+                     divMessages.append(span)/*inserisco lo span al interno del div*/
+                  }
                   divMessages.style.display = 'block';/*rendo visibile il div*/
-                  divMessages.append(span)/*inserisco lo span al interno del div*/
                }
             }
          });
