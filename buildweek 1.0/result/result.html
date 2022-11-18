@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/fontawesome.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Results</title>
+</head>
+
+<body>
+  <div id="bg"><!--sfondo-->
+
+    <!--header-->
+    <header>
+      <div id="logo">
+        <img src="../assets/epicode_logo.png" alt="logoepicode" />
+      </div>
+    </header>
+
+    <!--main-->
+    <main class="result-main">
+
+      <div class="pop-up-correct">
+        <div class="blu"></div>
+      </div>
+
+      <div class="pop-up-wrong">
+        <div class="viola"></div>
+      </div>
+
+      <div class="container">
+
+        <div id="upside">
+
+          <h1 class="title font-title">Results</h1><!--titolo pagina-->
+
+          <h2 class="subtitles">The summary of your answers:</h2><!--sottotitolo-->
+
+        </div>
+
+        <div id="risultato"></div>
+
+        <div id="side">
+
+          <div id="correct">
+            <h3 class="title">Correct</h3>
+            <p class="percentage"></p>
+            <p class="question"></p>
+          </div>
+
+            <div class="single-chart">
+              <svg viewBox="-2 -2 40 40" class="circular-chart blue">
+                  <path class="circle-bg" d="M 18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831
+                    "/>
+                  <path class="circle" d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <text x="18" y="20.35" class="risult-text"></text>
+              </svg>
+          </div>
+
+          <div id="wrong">
+            <h3>Wrong</h3>
+            <p class="percentage"></p>
+            <p class="question"></p>
+          </div>
+
+        </div>
+
+        <div id="buttonRates">
+          <button id="buttonRate">Rate us</button>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+  <!--script da inserire-->
+
+  <script type="text/javascript" src="script_result.js"></script>
+</body>
+
+</html>
