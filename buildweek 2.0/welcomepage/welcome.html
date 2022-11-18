@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="welcome">
+   <meta name="description" content="Welcome page destinated at the quiz of Epicode School, for the evaluation of the capacity of each course student.">
    <link rel="stylesheet" href="../css/fontawesome.css" />
    <link rel="stylesheet" href="../css/reset.css" />
    <link rel="stylesheet" href="../css/style.css" />
@@ -52,28 +52,28 @@
             <li class="list-elements">This exam take approx. <span class="bold">0-5 minutes.</span></li>
          </ul>
 
-      
+
          <forma>
             <div class="check">
-               
+
+               <!-- Messaggi di pop up in caso di mancato check -->
                <div class="messages"></div>
-               
+
                <div id="container-input">
-                  
+
                   <div id="container-checkbox">
-                     
+
                      <!--div per la checkbox-->
                      <div id="container-check"></div>
-                     
+
                      <span class="bold">I promise to answer myself without help from anyone</span>
-                     
+
                   </div>
-                  
-                  
+
                   <!--linck che fa da pulsante-->
                   <button class="button">PROCEED</button>
-                  <!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di presme sul div checkbox-->
-                  
+                  <!--per controllare se il div checkbox è stato confermato possiamo fare che href è vuoto fino a quando non di preme sul div checkbox-->
+
                </div>
             </div>
          </forma>
@@ -83,7 +83,10 @@
 
          /*permette di spuntare la checkbox*/
          document.querySelector('#container-check').addEventListener('click', function () {
-            if (this.innerHTML == '') {/*se la checkbox è vuota allor ainserisco l'immagine del tick*/
+            if (this.innerHTML == '') {/*se la checkbox è vuota allora inserisco l'immagine del tick*/
+            document.querySelector(".messages").remove()
+            
+
                this.innerHTML = '<i class="fas fa-check"></i>';
             } else {/*permetto all'utente di togliere la spunta*/
                this.innerHTML = '';
@@ -97,7 +100,6 @@
                window.location.href = "../Questions/questions.html";/*se valido ti manda alla paggina succesiva*/
             } else {
                let divMessages = document.querySelector('.messages');/*seleziono il div per inserire il messaggio*/
-
                if (divMessages.style.display != 'block') {/*se è stato inserito il messaggio allora il display è block quindi anche se riclicato il bottone non crea un nuovo messaggio ma rimane quello precedente*/
                   let span = document.createElement('span');/*creo uno span*/
                   span.textContent = 'Please fill the field!';/*scrivo il messaggio*/

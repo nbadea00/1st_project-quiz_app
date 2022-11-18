@@ -61,9 +61,9 @@ body {
     text-decoration: solid;
     background-color: white;
     padding: 10px;
-    border-top-left-radius: 15px ;
-    border-top-right-radius: 15px ;
-    border-bottom-right-radius: 15px ;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     border: 2px solid #c2128d;
 }
 
@@ -122,7 +122,9 @@ main {
 .check {
     display: flex;
     flex-direction: column;
-    margin-top: 110px;
+    height: 150px;
+    justify-content: end;
+
 }
 
 .messages {
@@ -153,6 +155,7 @@ main {
     width: 13px;
     border: solid 2px white;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 /*stile pulsante*/
@@ -169,6 +172,7 @@ main {
     width: 180px;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 /*
@@ -254,11 +258,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     height: 300px;
 }
 
-.input-numeri{
+.input-numeri {
     border: none;
     border-bottom: 1px solid #d20094;
     background-color: transparent;
@@ -268,11 +272,13 @@ header {
     color: white;
     font-size: 19px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.difficulty{
+.difficulty {
     outline: none;
-    text-align: center;;
+    text-align: center;
+    ;
     width: 180px;
     font-size: 19px;
     padding: 15px;
@@ -281,8 +287,10 @@ header {
     border: none;
     border-radius: 15px;
     box-shadow: 0px 0px 5px black;
+    cursor: pointer;
 }
 
+/* Stile box delle domande */
 #main-questions {
     padding-top: 30px;
 }
@@ -294,6 +302,8 @@ b {
 #base-timer-label {
     color: white
 }
+
+/* Stile box per le risposte */
 
 .container {
     /*serve per allineare la domanda e le risposte*/
@@ -313,7 +323,8 @@ b {
     line-height: 3rem;
     font-size: 40px;
 }
-.notice{
+
+.notice {
     font-size: 16px;
     text-align: left;
 }
@@ -354,6 +365,7 @@ b {
     font-size: 1rem;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .box-answers:hover {
@@ -538,11 +550,10 @@ Footer question
     stroke: #D20094;
 }
 
+/* Testo all'interno del cerchio */
 #risultato {
     font-size: 16px;
     position: relative;
-    /*top: 540px;
-    left: 44.3%;*/
     height: 0px;
     top: 160px;
     max-width: 265px;
@@ -587,77 +598,81 @@ Footer question
     border: none;
     padding: 0.8em 2.4em 0.8em 2.4em;
     border: 2px solid white;
+    cursor: pointer;
 }
+
 /*
     Review page
 */
-#title{
+
+/* 
+    Main
+*/
+
+#title {
     font-family: 'Outfit', sans-serif;
     font-size: 2.8em;
     font-weight: 600;
     padding-bottom: 20px;
 }
-/*
-#subtitle{
-    font-size: 1.6em;
-    font-family: 'Outfit', sans-serif;
-    padding: 0 115px 35px 115px;
-    font-weight: 300;
-}*/
-#subtitle p{
+
+
+#subtitle p {
     max-width: 650px;
     line-height: 1.3em;
     font-size: 1.5rem;
 }
 
 
-#feedback{
+#feedback {
     font-size: 1.6em;
     font-family: 'Outfit', sans-serif;
     padding-bottom: 35px;
     font-weight: 300;
 }
 
-#main-review{
+#main-review {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
 }
 
-#rating{
+/* Star */
+#rating {
     padding-bottom: 90px;
     margin-top: 15px;
 }
 
-#div-comment{
+.rating-list {
+    display: inline-block;
+    list-style: none;
+}
+
+.rating-list li {
+    float: right;
+    color: #0b113b;
+    padding-left: 10px;
+    font-size: 2.74em;
+    text-shadow: 0px 0px 1px black;
+    cursor: pointer;
+}
+
+#div-comment {
     text-align: left;
     text-align: center;
     max-width: 800px;
     border-bottom: 1px solid #D20094;
     margin-bottom: 60px;
 }
-#comment
-{
+
+#comment {
     border: none;
     background-color: transparent;
     padding-bottom: 7px;
     width: 670px;
     outline: none;
-    color : white;
-    font-size : 16px;
-}
-
-
-.rating-list {
-display: inline-block;
-list-style: none;
-}
-.rating-list li {
-float: right;
-color: #0b113b;
-padding-left:  10px;
-font-size: 2.74em;
-text-shadow: 0px 0px 1px black;
-
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }

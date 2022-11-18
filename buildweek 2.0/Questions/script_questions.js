@@ -1,12 +1,13 @@
 // Question
-localStorage.removeItem('voto')
-localStorage.removeItem('domanda');
-let domande = []
+localStorage.removeItem('voto'); //serve per rimuovere dal localStorage i voti passati
+localStorage.removeItem('domanda'); // serve per rimuovere dal localStorage le domande passate 
+let domande = [];
 let questionNumber = 0;
 let timerInterval = null;
 let namberQuestions = 10;
 let arrayDifficulty = ['easy', 'medium', 'hard']
-{
+{ // codice js per creare il forme il numero delle domande e la difficoltà
+
     let div = document.createElement('div');
     let inputText = document.createElement('input');
     let select = document.createElement('select');
@@ -16,10 +17,12 @@ let arrayDifficulty = ['easy', 'medium', 'hard']
     inputText.type = 'text';
     inputText.placeholder = 'Enter the number of questions(default = 10)'
     inputText.classList.add('input-numeri')
+//Evento per leggere singoli caratteri inseriti dall'utente nel input test
     inputText.addEventListener('keyup', function () {
+//Serve per controllare se l'ultimo carattere inserito è un numero o una lettera, se è una lettera la rimuove        
         if (isNaN(this.value)) {
             this.value = this.value.substring(0, this.value.length - 1)
-        }
+        }       
     })
 
     select.classList.add('difficulty')
@@ -37,7 +40,7 @@ let arrayDifficulty = ['easy', 'medium', 'hard']
     button.innerHTML = 'Submit'
     button.addEventListener('click', function () {
         div.remove();
-        if (inputText.value == '') {
+        if (inputText.value == '' || isNaN(inputText.value)) {
             inputText.value = '10'
         }
         namberQuestions = inputText.value
