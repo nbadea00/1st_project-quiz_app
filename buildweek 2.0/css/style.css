@@ -498,8 +498,6 @@ Footer question
 
 .pop-up-correct {
     position: absolute;
-    top: 405px;
-    left: 38%;
     visibility: hidden;
     z-index: 1;
 
