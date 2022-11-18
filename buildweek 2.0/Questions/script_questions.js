@@ -25,7 +25,7 @@ let arrayDifficulty = ['easy', 'medium', 'hard']
         }       
     })
 
-    select.classList.add('difficulty')
+    select.classList.add('difficulty')      // Seleziona difficoltà
     for (let i of arrayDifficulty) {
         let option = document.createElement('option');
         option.value = i
@@ -40,8 +40,8 @@ let arrayDifficulty = ['easy', 'medium', 'hard']
     button.innerHTML = 'Submit'
     button.addEventListener('click', function () {
         div.remove();
-        if (inputText.value == '' || isNaN(inputText.value)) {
-            inputText.value = '10'
+        if (inputText.value == '' || isNaN(inputText.value)) {              // se lo spazio è vuoto o non c'è un numero
+            inputText.value = '10'                                          //  imposta il numero di domande a 10 di default
         }
         namberQuestions = inputText.value
         startQuiz(select.value)
@@ -56,7 +56,7 @@ let arrayDifficulty = ['easy', 'medium', 'hard']
 
 
 
-function startQuiz(dif) {
+function startQuiz(dif) {                   // parametri vuoti per le funzioni
     let arrayQuestionIndex = [];
     let control = false;
     let voto = 0;
@@ -67,15 +67,16 @@ function startQuiz(dif) {
 
 
     fetch(/*'../assets/question.json'*/`https://opentdb.com/api.php?amount=${namberQuestions}&category=18&difficulty=${dif}`).then((response) => response.json()).then(function (data) {
-        domande = data;
+        domande = data;             // chiamata ajax
         question(domande);
     })
 
     function question(lista) {
-        timer()
+        timer()                     // creazione timer
         let indexQuestion;
-        do {
-            control = false;
+        // ciclo per controllare che non si ripetano le domande
+        do {                    
+            control = false;            
 
             indexQuestion = Math.floor(Math.random() * namberQuestions)
             for (let i of arrayQuestionIndex) {
@@ -84,49 +85,52 @@ function startQuiz(dif) {
                 }
             }
 
-        } while (control)
-        arrayQuestionIndex.push(indexQuestion);
+        } while (control)                           
+        arrayQuestionIndex.push(indexQuestion);                 // salvataggio indice risposta in locale
         questionWrite(lista.results[indexQuestion]);
     }
 
-    function questionWrite(domanda) {
+    function questionWrite(domanda) {                                       
+                // funzione per mostrare a schermo la domanda
         let containerQuestion = document.querySelector('.font-title')
         containerQuestion.innerHTML = domanda.question
+
         if(Array.isArray(domanda.correct_answer)){
             containerQuestion.innerHTML += '<p class = "notice">*Multiple choice</p>' 
         }
-        document.querySelector('.domanda').textContent = "QUESTION " + Number(questionNumber + 1);
+
+        document.querySelector('.domanda').textContent = "QUESTION " + Number(questionNumber + 1);          
         document.querySelector('.purple').textContent = "/" + namberQuestions;
         answer(domanda);
     }
 
-    function answer(domanda) {
+    function answer(domanda) {                  //funzione per mostrare a schermo le risposte
         let containerAnswer = document.querySelector('#container-answers');
         let answer = [];
         containerAnswer.innerHTML = '';
 
-        if (Array.isArray(domanda.correct_answer)) {
-            for (let i of domanda.correct_answer) {
+        if (Array.isArray(domanda.correct_answer)) {        // if che verifica se è presente più di una risposta giusta 
+            for (let i of domanda.correct_answer) {         // per ciclare le risposte
                 answer.push(i);
             }
         } else {
             answer.push(domanda.correct_answer);
         }
 
-        for (let i of domanda.incorrect_answers) {
+        for (let i of domanda.incorrect_answers) {      // salvataggio risposte sbagliate dentro un array
             answer.push(i);
         }
 
         let listIdAnswer = [];
         let numCasuale;
 
-        for (let i = 0; i < answer.length; i++) {
+        for (let i = 0; i < answer.length; i++) {         // ciclo for per creare elementi html che conterranno le risposte
             let div = document.createElement('div');
             let p = document.createElement('p');
             p.classList.add('answer');
             div.classList.add('box-answers');
 
-            do {
+            do {                                        // ciclo dowhile che serve per randomizzare l'inserimento delle risposte e prevenire ripetizione delle stesse
                 control = false
 
                 numCasuale = Math.floor(Math.random() * answer.length)
@@ -134,33 +138,33 @@ function startQuiz(dif) {
                     if (j == numCasuale) {
                         control = true;
                     }
-                }
+                }                                    
 
             } while (control)
 
 
-            listIdAnswer.push(numCasuale);
-
-            p.textContent = answer[numCasuale];
+            listIdAnswer.push(numCasuale);                  // salvo l'indice della risposta già inserita
+            
+            p.textContent = answer[numCasuale];                 
             div.append(p);
 
-            if (!Array.isArray(domanda.correct_answer)) {
+            if (!Array.isArray(domanda.correct_answer)) {           // controllo se la domanda è a risposta multipla o no per decidere l'event listener da assegnare
 
-                div.addEventListener('click', function () {
+                div.addEventListener('click', function () {         
                     let risposta = this.textContent;
 
-                    if (domanda.correct_answer == risposta) {
+                    if (domanda.correct_answer == risposta) {       // verifica se la risposta data è corretta
                         voto++;
                     }
 
                     questionNumber++;
-                    if (questionNumber == namberQuestions) {
+                    if (questionNumber == namberQuestions) {        // verifica se l'utente ha risposto a tutte le domande previste. Se è vero, lo reindirizza verso la pagina risultato, salvando il voto ed il numero delle domande
                         localStorage.setItem('voto', voto);
                         localStorage.setItem('namberQuestion', namberQuestions);
                         window.location.assign("../result/result.html")
                         return 0;
                     }
-                    question(domande)
+                    question(domande)                               // Una votla risposto alla domanda, viene richiamata la funzione per proporne una nuova
                 })
             } else {
                 numAnswer = 0;
@@ -171,25 +175,24 @@ function startQuiz(dif) {
             containerAnswer.append(div)
         }
 
-        function risposte() {
-            risposta.push(this.textContent);
-            numAnswer++;
-            if (numAnswer === 2) {
-                numAnswer++;
-                console.log(risposta)
-                for (let i of risposta) {
+        function risposte() {                                   // funzione per controllare la risposta multipla al click
+            risposta.push(this.textContent);                    // salva il valore del pulsante premuto dentro risposta
+            numAnswer++;                                        // variabile incrementa ogni volta che viene selezionata una riposta
+
+            if (numAnswer === 2) {                              // viene controllato se sono state date 2 risposte
+                numAnswer++;                                                     
+                for (let i of risposta) {                       // ciclo che serve per controllare che entrambe le risposte inserite siano giuste
                     if (domanda.correct_answer.find(element => element == i)) {
-                        console.log("ciao");
                         controlAnswer++;
                     }
                 }
                 risposta = []
                 if (controlAnswer == 2) {
-                    console.log("giusto")
+                 
                     voto++;
                 }
                 questionNumber++;
-                if (questionNumber == namberQuestions) {
+                if (questionNumber == namberQuestions) {          // alla fine delle 10 domande ti reindirizza alal pagina del risultato
                     localStorage.setItem('voto', voto);
                     localStorage.setItem('namberQuestion', namberQuestions);
                     window.location.assign("../result/result.html")
@@ -200,6 +203,8 @@ function startQuiz(dif) {
         }
     }
 
+    // funzione timer
+    
     function onTimesUp() {
         clearInterval(timerInterval);
     }
@@ -211,8 +216,8 @@ function startQuiz(dif) {
     
         // timer js
         const FULL_DASH_ARRAY = 283;
-        const WARNING_THRESHOLD = 0;
-        const ALERT_THRESHOLD = 0;
+        const WARNING_THRESHOLD = 0;        // impedisce che il timer vada in loop
+        const ALERT_THRESHOLD = 0;          // impedisce che il timer vada in loop
     
         const COLOR_CODES = {
             step1: {
@@ -231,13 +236,14 @@ function startQuiz(dif) {
     
     
         let timePassed = 0;
-        const TIME_LIMIT = 360;
+        const TIME_LIMIT = 60;
         let timeLeft = TIME_LIMIT;
         timerInterval = null
     
         let remainingPathColor = COLOR_CODES.step1.color;
         let timer = document.getElementById("timer")
     
+        // creazione svg timer
         timer.innerHTML = `
             <div class="base-timer">
             <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -279,7 +285,7 @@ function startQuiz(dif) {
                 if (timeLeft === 0) {
                     onTimesUp();
                     questionNumber++;
-                    if (questionNumber == namberQuestions) {
+                    if (questionNumber == namberQuestions) {                // se il tempo finesce all'ultima domanda ti reindirizza alla pagina dei risultati
                         localStorage.setItem('voto', voto);
                         localStorage.setItem('namberQuestion', namberQuestions);
                         window.location.assign("../result/result.html");
