@@ -19,8 +19,8 @@ let arrayDifficulty = ['easy', 'medium', 'hard']
     inputText.classList.add('input-numeri')
 //Evento per leggere singoli caratteri inseriti dall'utente nel input test
     inputText.addEventListener('keyup', function () {
-//Serve per controllare se l'ultimo carattere inserito è un numero o una lettera, se è una lettera la rimuove        
-        if (isNaN(this.value)) {
+//Serve per controllare se l'ultimo carattere inserito è un numero o una lettera, se è una lettera la rimuove     
+        if (isNaN(this.value) || this.value[this.value.length-1] == '.' ) {
             this.value = this.value.substring(0, this.value.length - 1)
         }       
     })
