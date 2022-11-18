@@ -1,9 +1,9 @@
 {
-    let voto = localStorage.getItem('voto');
-    let namberQuestion = localStorage.getItem('namberQuestion');
-    let perGiuste = (voto / namberQuestion) * 100;
-    let perErrato = 100 - perGiuste;
-    const pixY = 400;
+    let voto = 7 //localStorage.getItem('voto');
+    let namberQuestion = 17 //localStorage.getItem('namberQuestion');
+    let perGiuste = ((voto / namberQuestion) * 100).toFixed(2);
+    let perErrato = (100 - perGiuste).toFixed(2);
+    const pixY = 475;
     const pixX = 6;
 
     document.querySelector('#correct .percentage').textContent = perGiuste + "%"
@@ -31,8 +31,8 @@
 
     document.querySelector('.circle').onmousemove = function () {
         popWrong.style.visibility = 'visible'
-        let y = 405 + Number(pixY * perErrato / 100);
-        let x = 51 + Number(pixX - pixX * (Math.abs(50 - perErrato) / 100));
+        let y = 250 + Number(pixY * perErrato / 100);
+        let x = 52 + Number(pixX - pixX * (Math.abs(50 - perErrato) / 100));
         popWrong.style.top = `${y}px`;
         popWrong.style.left = `${x}%`;
     }
@@ -42,8 +42,8 @@
 
     document.querySelector('.circle-bg').onmousemove = function () {
         popCorrect.style.visibility = 'visible'
-        let y = 405 + Number(pixY * perGiuste / 100);
-        let x = 43 - Number(pixX - pixX * (Math.abs(50 - perGiuste) / 100));
+        let y = 250 + Number(pixY * perGiuste / 100);
+        let x = 41 - Number(pixX - pixX * (Math.abs(50 - perGiuste) / 100));
         popCorrect.style.top = `${y}px`;
         popCorrect.style.left = `${x}%`;
     }
